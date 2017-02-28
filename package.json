@@ -1,0 +1,28 @@
+{
+  "name": "yuki540.com",
+  "version": "1.0.0",
+  "description": "My homepage.",
+  "main": "bin/app.coffee",
+  "dependencies": {
+    "coffee-script": "^1.12.4",
+    "express": "^4.14.1",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "coffee bin/app.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuki540net/yuki540.com.git"
+  },
+  "keywords": [
+    "yuki540"
+  ],
+  "author": "yuki540",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuki540net/yuki540.com/issues"
+  },
+  "homepage": "https://github.com/yuki540net/yuki540.com#readme"
+}
