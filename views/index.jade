@@ -1,0 +1,193 @@
+doctype html
+html(lang="ja")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="Content-Type", content="text/html")
+		meta(http-equiv="Content-Style-Type", content="text/css")
+		meta(http-equiv="Content-Script-Type", content="text/javascript")
+		meta(name="author", content="yuki540")
+		meta(name="description", content="Let's begin the game.")
+		meta(name="generator", content="Sublime Text")
+		meta(name="copyright", content="&copy;yuki540")
+		meta(name="viewport", content="width=device-width,user-scalable=no,maximum-scale=1")
+		link(rel="stylesheet", type="text/css", href="stylesheets/font.css")
+		link(rel="stylesheet", type="text/css", href="stylesheets/base.css")
+		link(rel="stylesheet", type="text/css", href="stylesheets/keyframes.css")
+		link(
+			rel="stylesheet"
+			type="text/css"
+			href="stylesheets/sp/index.css"
+			media="screen and (max-width: 480px)"
+		)
+		link(
+			rel="stylesheet"
+			type="text/css"
+			href="stylesheets/pc/index.css"
+			media="screen and (min-width: 481px)"
+		)
+		link(rel="shortcut icon", href="")
+		link(rel="apple-touch-icon", href="")
+		title 人生送りバント。
+		script(src="script/app.js")
+	body
+		main#application
+			header#header
+				div.inner
+					a#logo(href="/")
+						img(src="images/logo.png", alt="ロゴ")
+					nav#global-nav
+						a.nav-li(href="#profile") Profile
+						a.nav-li(href="#product") Product
+						a.nav-li(href="#activity") Activity
+						a.nav-li(href="#news") News
+						a.nav-li(href="#contact") Contact
+			article#content
+				section#main-visual
+				section#profile.area
+					h2.area-title Profile
+					p.area-description yuki540とは、こんな人物である。
+					div.inner
+						section.left
+							div.icon
+								div.location 人生送りバント。
+								div.fullname Yuki-Yamamoto
+								div.name yuki540
+						section.center
+							p.status
+								span.tag Location
+								span.val 和歌山
+							p.status
+								span.tag Age
+								span.val 20
+							p.status
+								span.tag Birthday
+								span.val 1996.11.09
+							p.status
+								span.tag Like
+								span.val アニメ
+								span.val 漫画
+								span.val 声優
+								span.val PC
+							p.status
+								span.tag Language
+								span.val CoffeeScript
+								span.val Python
+								span.val PHP
+							p.status
+								span.tag Job
+								span.val 専門学生
+							p.status
+								span.tag PC
+								span.val MacBook_Pro
+							p.status
+								span.tag Phone
+								span.val Galaxy_S7_edge
+						section.right
+							h3.about About_me
+							span.story
+								「さくら荘のペットな彼女」を読み、プログラマーになることを決意。
+								br
+							span.story
+								理解力が低いながらも、気合いでプログラミングを習得し始める。
+								br
+							span.story
+								基本的にWeb技術をメインに技術を学んでいる。
+								br
+							span.story
+								アニメや漫画が好きで、好きな声優は、巽悠衣子である。
+								br
+							span.story
+								また、コミュ障なので、友達を募集しているところである。
+								br
+				section#product.area
+					h2.area-title Product
+					p.area-description 開発したソフトウェア・ライブラリ・フレームワークを公開。
+					div.inner
+						a.content-li(href="https://github.com/yuki540net/satella.io")
+							img(src="images/product/satella.io.png")
+							h3.content-li-title satella.io
+							h4.content-li-catchcopy Live2Dライクなオープンソースソフトウェア
+							p.content-li-description 
+								「絵を動かす、心を動かす。」
+								br 
+								専門学生である「yuki540」が個人で作り上げたElectron製のソフトウェアでCoffeeScriptで書かれている。
+								br
+								「Web」に組み込むのに特化したシステムを目指す。
+								br
+								ソースコードはGitHub上で公開。
+
+						a.content-li(href="https://github.com/yuki540net/onsen-node")
+							img(src="images/product/onsen-node.png")
+							h3.content-li-title onsen-node
+							h4.content-li-catchcopy 声優ラジオサイト「音泉」APIライブラリ
+							p.content-li-description 
+								声優ラジオサイト「音泉」のAPIライブラリ。
+								br
+								「Node.js」から簡単に「音泉」の情報にアクセスすることが可能。
+								br
+								コマンドライン上でも動作する。
+								br
+								ソースコードはGitHub上で公開。
+
+						a.content-li(href="https://github.com/yuki540net/nicoJS")
+							img(src="images/product/nicoJS.png")
+							h3.content-li-title nicoJS
+							h4.content-li-catchcopy ニコニコ風コメントを実装するライブラリ
+							p.content-li-description 
+								ニコニコ動画風のコメントを実装するライブラリ。
+								br
+								Webサイトなどに簡単に組み込むことが可能。
+								br
+								ソースコードはGitHub上で公開。
+						a.content-li(href="http://www.nicovideo.jp/watch/sm26374280")
+							img(src="images/product/colorful_step.png")
+							h3.content-li-title COLORFUL_STEP
+							h4.content-li-catchcopy 待ち望んだ全ては----そこにあるの
+							p.content-li-description 
+								「やはり、俺の青春ラブコメはまちがっている。」のMAD。
+								br
+								動画編集に没頭していた頃の作品。
+								br
+								曲はClariSの「STEP」で、静止画とアニメを組み合わせて、俺ガイルの世界観をカラフルに表現している。
+
+				section#activity.area
+					h2.area-title Activity
+					p.area-description 活動した内容や成果を公開。
+					div.inner
+						a.content-li(href="http://niconare.nicovideo.jp/watch/kn2342")
+							img(src="images/activity/satella.io.png")
+							h3.content-li-title Live2Dライクなオープンソースソフトウェアの開発
+							p.content-li-description 
+								在学中の専門学校での作品発表会。
+								br 
+								学科代表（IT学科）で「Live2Dライクなオープンソースソフトウェアの開発」という内容で登壇。
+								br 
+								発表に使ったスライドは、ニコナレにて公開。
+
+						a.content-li(href="https://twitter.com/eriri_jp/status/794745927856635904")
+							img(src="images/activity/calil.png")
+							h3.content-li-title カーリルの脆弱性報告
+							p.content-li-description 
+								日本最大の図書館検索サイト「カーリル」の脆弱性を報告。
+								br
+								お礼の品として、「カーリル」オリジナルのマグカップとコーヒーパックをもらう。
+				section#news.area
+					h2.area-title News
+					p.area-description 最近の出来事をお知らせ。
+					div.inner
+						p.news-li Galaxy_S7_Edgeを購入。
+						a.news-link(href="http://qiita.com/shimacpyon/items/05435a60433ddada77a0#satellaio") 「satella.io」が2Dモーフィングが出来るソフトとして紹介される。
+						a.news-link(href="https://github.com/yuki540net/satella.io") satella.ioをオープンソース化。
+						p.news-li 新型MacBook_Proを購入。
+				section#contact.area
+					h2.area-title Contact
+					p.area-description 連絡を取りたい時はSNSで。
+					div.inner
+						div.sns
+							a.sns-li(href="https://github.com/yuki540net").github
+							a.sns-li(href="https://twitter.com/eriri_jp").twitter
+							a.sns-li(href="https://www.npmjs.com/~yuki540").npm
+							a.sns-li(href="http://qiita.com/yuki540").qiita
+							a.sns-li(href="http://www.nicovideo.jp/user/25832964").niconico
+			footer#footer
+				p Copyright 2017 yuki540 Some rights reserved.
