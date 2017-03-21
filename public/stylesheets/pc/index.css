@@ -64,7 +64,10 @@ a {
  */
 #content {
 	width: 100%;
-	margin-top: 40px;
+}
+#content .inner {
+	margin-top: 540px;
+	padding-top: 20px;
 }
 
 /*** area ***/
@@ -80,6 +83,9 @@ a {
 #content .area .area-description {
 	font-size: 16px; color: #888;
 	text-align: center; font-weight: normal;
+}
+#content .area .inner {
+	margin-top: 30px;
 }
 #content .area .inner:after {
 	content: ""; display: block; clear: both;
@@ -121,13 +127,16 @@ a {
 	line-height: 26px;
 }
 
-
 /*** main-visual ***/
 #main-visual {
+	position: fixed;
+	top: 40px;
+	left: 0;
 	width: 100%; height: 500px;
 	background-image: url(/images/main_visual/1.jpg);
 	background-size: cover;
 	background-position: center;
+	z-index: -5;
 }
 
 #main-visual #link {
