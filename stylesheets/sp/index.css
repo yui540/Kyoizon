@@ -102,7 +102,7 @@ a {
 	top: 10px;
 	left: 0;
 	width: 100%; height: 200px;
-	background-image: url(/images/main_visual/1.jpg);
+	background-image: url(../../images/main_visual/1.jpg);
 	background-size: cover;
 	background-position: center;
 	z-index: -5;
@@ -126,7 +126,7 @@ a {
 #profile .left .icon {
 	position: relative;
 	width: 320px; height: 320px;
-	background-image: url(/images/profile/yuki540.png);
+	background-image: url(../../images/profile/yuki540.png);
 	background-repeat: no-repeat;
 	background-size: 50%;
 	background-position: center;
