@@ -1,0 +1,250 @@
+/**
+ *
+ * @author yuki540
+ * base.css
+ *
+ */
+html, body {
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Boku';
+	color: #4c4c4c;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+a {
+	color: #4c4c4c;
+	text-decoration: none;
+}
+
+h1, h2, h3, p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+input {
+	-webkit-appearance: none;
+	border: none;
+	padding: 0;
+	border-radius: 0;
+}
+
+/*********************************************************
+ *
+ * テンプレートデザイン
+ *
+ *********************************************************/
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-width: 1000px;
+	height: 50px;
+	background-color: #736a70;
+	box-shadow: 0 0 20px rgba(0,0,0,0.2) inset;
+	z-index: 5;
+}
+.header .logo {
+	float: left;
+	width: 150px;
+	height: 50px;
+	display: block;
+	cursor: pointer;
+}
+.header .logo:hover {
+	transform: scale(1.5);
+}
+.header img {
+	display: block;
+	margin: 0 auto;
+	height: 50px;
+}
+
+/*********************************************************
+ *
+ * パーツデザイン
+ *
+ *********************************************************/
+/*** タイトル ***/
+.title {
+	display: table;
+	width: 100%;
+	height: 50px;
+}
+.title .inner {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #aaa;
+	text-align: center;
+}
+
+/*** ツールバー ***/
+.tool-bar {
+	width: 100%;
+	height: 50px;
+}
+.tool-bar:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.tool-li { float: left; }
+
+/*** パネル ***/
+.panel-light-type {
+	background-color: #fff;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+}
+.panel-dark-type {
+	background-color: #393939;
+	border: solid 1px #111;
+	border-radius: 5px;
+}
+
+/*** ボタン ***/
+.btn-blue-type {
+	color: #fff;
+	background-color: #1da1f2;
+	border: solid 1px #3b88c3;
+	border-radius: 5px;
+	display: table;
+	cursor: pointer;
+}
+.btn-light-type {
+	color: #4c4c4c;
+	background-color: #fff;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	display: table;
+	cursor: pointer;
+}
+.btn-dark-type {
+	color: #ccc;
+	background-color: #393939;
+	border: solid 1px #111;
+	border-radius: 5px;
+	display: table;
+	cursor: pointer;
+}
+.btn-inner {
+	font-size: 12px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*** スライダー ***/
+.slider {
+	position: relative;
+	width: 300px;
+	height: 5px;
+	background-color: #e0e0e0;
+}
+.slider .loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	background-color: rgb(0,180, 255);
+}
+.slider .pic {
+	position: absolute;
+	top: -8px;
+	left: 0;
+	width: 10px;
+	height: 20px;
+	background-color: #fff;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+/*********************************************************
+ *
+ * モーダルビュー
+ *
+ *********************************************************/
+.modal-view {
+	position: fixed;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.modal-view .inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+.modal-view .inner .modal-view-box {
+	margin: 0 auto;
+}
+
+/*********************************************************
+ *
+ * アニメーション
+ *
+ *********************************************************/
+.animate {
+	transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+}
+
+
+/*********************************************************
+ *
+ * 便利ツール
+ *
+ *********************************************************/
+/**
+ * サイズ調整
+ */
+.box-size {
+	box-sizing: border-box;
+}
+
+/**
+ * 背景画像
+ */
+.bg_img {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/**
+ * 回り込み回避
+ */
+.clear-both:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/**
+ * 色
+ */
+.pink { color: #ed588d; }
+.orange { color: #ff8100; }
+.green { color: #86c351; }
+.blue { color: rgb(0,180,255); }
+.gray { color: #887E85; }
+
+.bg_pink { background-color: #ed588d; }
+.bg_orange { background-color: #ff8100; }
+.bg_green { background-color: #86c351; }
+.bg_blue { background-color: rgb(0,180,255); }
+.bg_gray { background-color: #887E85; }

@@ -1,0 +1,206 @@
+/**
+ *
+ * @author yuki540
+ * main-visual.css
+ *
+ */
+@import screen and (max-width: 640px);
+
+#main-visual {
+	position: relative;
+	overflow: hidden;
+}
+#main-visual .view {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#main-visual .img {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*** text-panel ***/
+#text-panel {  }
+#text-panel .text {
+	position: absolute;
+	top: -100px;
+	width: 100px;
+	height: 100px;
+	opacity: 0.4;
+	background-size: 80%;
+	border: solid 1px #000;
+}
+#text-panel .fail_a {
+	animation: fail_a 10s linear 0s forwards;
+	-webkit-animation: fail_a 10s linear 0s forwards; 
+}
+#text-panel .fail_b {
+	animation: fail_b 10s linear 0s forwards;
+	-webkit-animation: fail_b 10s linear 0s forwards; 
+}
+
+/*** yukino ***/
+#yukino {  }
+#yukino .illust {
+	background-position: left;
+	background-size: auto 100%;
+	background-image: url(../../img/main-visual/yukino.png); 
+	animation: fade_in 4s ease 0s forwards;
+	-webkit-animation: fade_in 4s ease 0s forwards;
+}
+
+/*** logo ***/
+#logo {
+	position: absolute;
+	top: -40px;
+	left: -10px;
+	width: 170px;
+	height: 450px;
+	transform: scale(0.8);
+}
+#logo .item {
+	position: absolute;
+	top: 125px;
+	left: -15px;
+	width: 200px;
+	height: 200px;
+	background-size: 100%;
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	background-image: url(../../img/main-visual/item.png); 
+}
+#logo .text {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	transform: rotateY(90deg);
+	background-size: 100%;
+	cursor: pointer;
+}
+#logo .text:hover {
+	
+}
+#logo .ya {
+	animation: rotate_y 1s ease 0s forwards;
+	-webkit-animation: rotate_y 1s ease 0s forwards;
+	top: 0; right: 0;
+	background-image: url(../../img/main-visual/ya.png); 
+}
+#logo .ha {
+	animation: rotate_y 1s ease 0.2s forwards;
+	-webkit-animation: rotate_y 1s ease 0.2s forwards;
+	top: 50px; right: 0;
+	background-image: url(../../img/main-visual/ha.png); 
+}
+#logo .ri {
+	animation: rotate_y 1s ease 0.4s forwards;
+	-webkit-animation: rotate_y 1s ease 0.4s forwards;
+	top: 100px; right: 0;
+	background-image: url(../../img/main-visual/ri.png); 
+}
+#logo .ore {
+	animation: rotate_y 1s ease 0.6s forwards;
+	-webkit-animation: rotate_y 1s ease 0.6s forwards;
+	top: 0; right: 60px;
+	background-image: url(../../img/main-visual/ore.png); 
+}
+#logo .no {
+	animation: rotate_y 1s ease 0.8s forwards;
+	-webkit-animation: rotate_y 1s ease 0.8s forwards;
+	top: 50px; right: 60px;
+	background-size: 80%;
+	background-image: url(../../img/main-visual/no.png); 
+}
+#logo .sei {
+	animation: rotate_y 1s ease 1s forwards;
+	-webkit-animation: rotate_y 1s ease 1s forwards;
+	top: 100px; right: 60px;
+	background-image: url(../../img/main-visual/sei.png); 
+}
+#logo .syun {
+	animation: rotate_y 1s ease 1.2s forwards;
+	-webkit-animation: rotate_y 1s ease 1.2s forwards;
+	top: 150px; right: 60px;
+	background-image: url(../../img/main-visual/syun.png); 
+}
+#logo .ra {
+	animation: rotate_y 1s ease 1.4s forwards;
+	-webkit-animation: rotate_y 1s ease 1.4s forwards;
+	top: 200px; right: 60px;
+	background-image: url(../../img/main-visual/ra.png); 
+}
+#logo .bu {
+	animation: rotate_y 1s ease 1.6s forwards;
+	-webkit-animation: rotate_y 1s ease 1.6s forwards;
+	top: 250px; right: 60px;
+	background-image: url(../../img/main-visual/bu.png); 
+}
+#logo .ko {
+	animation: rotate_y 1s ease 1.8s forwards;
+	-webkit-animation: rotate_y 1s ease 1.8s forwards;
+	top: 300px; right: 60px;
+	background-image: url(../../img/main-visual/ko.png); 
+}
+#logo .me {
+	animation: rotate_y 1s ease 2s forwards;
+	-webkit-animation: rotate_y 1s ease 2s forwards;
+	top: 350px; right: 60px;
+	background-image: url(../../img/main-visual/me.png); 
+}
+#logo .wa {
+	animation: rotate_y 1s ease 2.2s forwards;
+	-webkit-animation: rotate_y 1s ease 2.2s forwards;
+	top: 400px; right: 60px;
+	background-image: url(../../img/main-visual/wa.png); 
+}
+#logo .ma {
+	animation: rotate_y 1s ease 2.4s forwards;
+	-webkit-animation: rotate_y 1s ease 2.4s forwards;
+	top: 0; right: 120px;
+	background-image: url(../../img/main-visual/ma.png); 
+}
+#logo .ti {
+	animation: rotate_y 1s ease 2.6s forwards;
+	-webkit-animation: rotate_y 1s ease 2.6s forwards;
+	top: 50px; right: 120px;
+	background-image: url(../../img/main-visual/ti.png); 
+}
+#logo .ga {
+	animation: rotate_y 1s ease 2.8s forwards;
+	-webkit-animation: rotate_y 1s ease 2.8s forwards;
+	top: 100px; right: 120px;
+	background-image: url(../../img/main-visual/ga.png); 
+}
+#logo .ltu {
+	animation: rotate_y 1s ease 3.0s forwards;
+	-webkit-animation: rotate_y 1s ease 3.0s forwards;
+	top: 140px; right: 120px;
+	background-image: url(../../img/main-visual/ltu.png); 
+}
+#logo .te {
+	animation: rotate_y 1s ease 3.2s forwards;
+	-webkit-animation: rotate_y 1s ease 3.2s forwards;
+	top: 190px; right: 120px;
+	background-image: url(../../img/main-visual/te.png); 
+}
+#logo .i {
+	animation: rotate_y 1s ease 3.4s forwards;
+	-webkit-animation: rotate_y 1s ease 3.4s forwards;
+	top: 240px; right: 120px;
+	background-image: url(../../img/main-visual/i.png); 
+}
+#logo .ru {
+	animation: rotate_y 1s ease 3.6s forwards;
+	-webkit-animation: rotate_y 1s ease 3.6s forwards;
+	top: 290px; right: 120px;
+	background-image: url(../../img/main-visual/ru.png); 
+}
+#logo .ten {
+	animation: rotate_y 1s ease 3.8s forwards;
+	-webkit-animation: rotate_y 1s ease 3.8s forwards;
+	top: 310px; right: 120px;
+	background-image: url(../../img/main-visual/ten.png); 
+}
+

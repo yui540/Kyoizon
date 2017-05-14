@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta name="author" content="yuki540">
-    <meta name="description" content="yuki540のホームページ。">
+    <meta name="description" content="yuki540の人生送りバント。">
     <meta name="generator" content="Sublime Text">
     <meta name="copyright" content="&amp;copy;yuki540">
     <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
@@ -17,254 +17,331 @@
     <meta name="twitter:image" content="http://yuki540.com/images/profile/yuki540.png" />
     <link rel="stylesheet" type="text/css" href="stylesheets/font.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pc.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/sp/index.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pc/index.css" media="screen and (min-width: 481px)">
     <link rel="shortcut icon" href="images/profile/yuki540.png">
     <link rel="apple-touch-icon" href="images/profile/yuki540.png">
-    <title>ホンモノ。</title>
-    <script type="text/javascript">
-    function vusialSize() {
-      var width  = (window.innerWidth > 1100) ? window.innerWidth : 1100
-      ,   height = (window.innerHeight > 650) ? window.innerHeight : 650
-
-      document.getElementById('header').style.width  = width + 'px'
-      document.getElementById('header').style.height = height + 'px'
-    }
-
-    window.addEventListener('load', function() {
-      vusialSize()
-    })
-    window.addEventListener('resize', function() {
-      vusialSize()
-    })
-    </script>
+    <title>人生送りバント。</title>
   </head>
   <body>
     <main id="application">
       <header id="header">
-        <section class="left">
-          <div class="inner">
-            <div class="box">
-              <img src="images/logo.png" alt="ロゴ" class="logo" />
-              <div class="sns">
-              	<section class="twitter">
-              		<a href="https://twitter.com/eriri_jp" target="_blank" class="icon"></a>
-              		<div class="bar"></div>
-              	</section>
-              	<section class="github">
-              		<a href="https://github.com/yuki540net" target="_blank" class="icon"></a>
-              		<div class="bar"></div>
-              	</section>
-              	<section class="qiita">
-              		<a href="http://qiita.com/yuki540" target="_blank" class="icon"></a>
-              		<div class="bar"></div>
-              	</section>
-              </div>
-              <p class="copyright">Copyright 2017 yuki540 Some rights reserved.</p>
-              <div class="scroll">
-              	<section class="icon1"></section>
-              	<section class="icon2"></section>
-              	<section class="icon3"></section>
-              </div>
+        <div class="inner">
+          <a id="logo" href="/">
+            <img src="images/logo.png" alt="ロゴ">
+          </a>
+          <nav id="global-nav">
+            <a href="#profile" class="nav-li">Profile</a>
+            <a href="#product" class="nav-li">Product</a>
+            <a href="#activity" class="nav-li">Activity</a>
+            <a href="#news" class="nav-li">News</a>
+            <a href="#contact" class="nav-li">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <article id="content">
+        <section class="main-visual">
+          <div class="chara"></div>
+          <div class="box">
+            <div class="inner">
+              <img src="images/main_visual/logo-large.png" />
             </div>
           </div>
         </section>
-        <section class="right">
-          <div class="character"></div>
-        </section>
-      </header>
-      <article id="content">
-        <section class="area" id="profile">
-          <h2 class="area-title">Profile</h2>
-          <p class="area-desc">私、yuki540について。</p>
-        	<div class="inner">
-        		<section class="left">
-        			<section class="box box-1">
-        				<h3>STATUS</h3>
-        				<p>Location: Wakayama</p>
-        				<p>Age: 20</p>
-        				<p>Birthday: 1996.11.09</p>
-        			</section>
-        			<section class="box box-2">
-        				<h3>ABOUT</h3>
-        				<p>Like: Anime, PC</p>
-        				<p>Language: Python, JavaScript, PHP, CoffeeScript</p>
-        				<p>Love: 由比ヶ浜結衣</p>
-        			</section>
-        			<section class="box box-3">
-        				<img src="images/profile/yuki540.png" class="thumb" />
-        				<h3 class="name">yuki540</h3>
-        			</section>
-        			<section class="box box-4">
-        				<h3>STORY</h3>
-        				<p>「さくら荘のペットな彼女」を読み、プログラマになることを決意。</p>
-        			</section>
-        			<section class="box box-5">
-        				<h3>MESSAGE</h3>
-        				<p>コミュニケーションが苦手なので、優しく接してください。</p>
-        			</section>
-        		</section>
-        		<section class="right"></section>
-        	</div>
-        </section>
-        <section id="product">
-          <h2 class="area-title">Product</h2>
-          <p class="area-desc">私が作ったものを紹介。</p>
-          <div class="inner">
-            <a href="https://github.com/yuki540net/satella.io" class="product-li">
-              <img src="images/product/satella.io.png" />
-              <h3>satella.io</h3>
-              <h4>Live2Dライクなオープンソースソフトウェア</h4>
-              <p>「絵を動かす、心を動かす。」
-              <br>
-              専門学校2年生の時に個人で作り上げたElectron製のソフトウェアでCoffeeScriptで書かれている。
-              <br>
-              現在は、Webサービスとして公開できるように開発を進行中である。
-              <br>
-              ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="https://github.com/yuki540net/wakaba" class="product-li">
-              <img src="images/product/wakaba.png" />
-              <h3>wakaba</h3>
-              <h4>PC画面上にコメントが流せるデスクトップアプリ</h4>
-              <p>PCの画面上にニコニコ動画風のコメントが流せるソフトウェア。
-                <br>
-                Twitterのツイートをリアルタイムに取得してコメントを流している。
-                <br>
-                GitHubのリリースページから、ダウンロード可能。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="https://github.com/yuki540net/toa" class="product-li">
-              <img src="images/product/toa.png" />
-              <h3>兎亜</h3>
-              <h4>シンプルで可愛いミュージックプレイヤー</h4>
-              <p>Electron製のシンプルなミュージックプレイヤー。
-                <br>
-                選択したディレクトリのmp3ファイルを再生する。
-                <br>
-                GitHubのリリースページから、ダウンロード可能。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="https://github.com/yuki540net/toa" class="product-li">
-              <img src="images/product/ontama.png" />
-              <h3>音卵</h3>
-              <h4>声優ラジオ音泉をダウンロードするAndroidアプリ</h4>
-              <p>Cordovaで作られたAndroidアプリ。
-                <br>
-                声優ラジオ音泉をダウンロードすることが可能。
-                <br>
-                Google Playにて公開中。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="https://github.com/yuki540net/onsen-downloader" class="product-li">
-              <img src="images/product/onsen-downloader.png" />
-              <h3>onsen-downloader</h3>
-              <h4>声優ラジオ音泉ダウンロード用Chrome拡張</h4>
-              <p>声優ラジオサイト「音泉」の音声・動画ファイルをダウンロードするChrome拡張。
-                <br>
-                APIサーバにはonsen-nodeを使用。
-                <br>
-                Chromeウェブストアにて公開。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="http://yuki540.com/product/oregairu" class="product-li">
-              <img src="images/product/oregairu.png" />
-              <h3>俺ガイル。非公式サイト</h3>
-              <h4>「俺は、本物が欲しい。」</h4>
-              <p>アニメ「やはり、俺の青春ラブコメはまちがっている。」の非公式サイト。
-                <br>
-                俺ガイル好きなyuki540が衝動に駆られて、作ったサイト。
-                <br>
-                白を基調とした美しくも、儚げなデザインに仕上げました。</p>
-            </a>
-            <a href="https://github.com/yuki540net/web-icon-node" class="product-li">
-              <img src="images/product/web-icon-node.png" />
-              <h3>web-icon-node</h3>
-              <h4>Webクリップアイコンやファビコンを取得するライブラリ</h4>
-              <p>Webクリップアイコンやファビコンなどのリンクを取得するライブラリ。
-                <br>
-                npm上で公開している。
-                <br>
-                Python版・PHP版も公開予定。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="https://github.com/yuki540net/onsen-node" class="product-li">
-              <img src="images/product/onsen-node.png" />
-              <h3>onsen-node</h3>
-              <h4>声優ラジオサイト「音泉」APIライブラリ</h4>
-              <p>声優ラジオサイト「音泉」のAPIライブラリ。
-                <br>
-                「Node.js」から簡単に「音泉」の情報にアクセスすることが可能。
-                <br>
-                コマンドライン上でも動作する。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="https://github.com/yuki540net/nicoJS" class="product-li">
-              <img src="images/product/nicoJS.png" />
-              <h3>nicoJS</h3>
-              <h4>ニコニコ風コメントを実装するライブラリ</h4>
-              <p>ニコニコ動画風のコメントを実装するライブラリ。
-                <br>
-                Webサイトなどに簡単に組み込むことが可能。
-                <br>
-                ソースコードはGitHub上で公開。</p>
-            </a>
-            <a href="http://www.nicovideo.jp/watch/sm26374280" class="product-li">
-              <img src="images/product/colorful_step.png" />
-              <h3>COLORFUL_STEP</h3>
-              <h4>待ち望んだ全ては----そこにあるの</h4>
-              <p>「やはり、俺の青春ラブコメはまちがっている。」のMAD。
-                <br>
-                動画編集に没頭していた頃の作品。
-                <br>
-                曲はClariSの「STEP」で、静止画とアニメを組み合わせて、俺ガイルの世界観をカラフルに表現している。</p>
-            </a>
+        <!-- ***************************** Profile ******************************* -->
+        <h2 class="title" id="profile">Profile</h2>
+        <p class="description">私、yuki540はこんな人物です。</p>
+
+        <section class="profile">
+          <div class="card">
+            <div class="header"></div>
+            <div class="icon"></div>
+            <h2>yuki540</h2>
+            <p>Age: 20</p>
+            <p>Birthday: 1996.11.09</p>
+            <p>Location: Wakayama, Japan</p>
+            <p>Job: 専門学生（3年生）</p>
+          </div>
+          <div class="like">
+            <h3>Language</h3>
+            <span>CoffeeScript</span><span>JavaScript</span><span>Python</span><span>PHP</span><span>HTML5</span><span>CSS3</span>
+            <h3>Like</h3>
+            <span>Live2D</span><span>Electron</span><span>Cordova</span><span>Riot.js</span><span>Node.js</span>
+            <h3>Device</h3>
+            <span>MacBook_Pro</span><span>Galaxy_S7_Edge</span><span>Raspberry_PI</span>
+          </div>
+          <div class="story">
+            <h2>About</h2>
+            <span>私、yuki540は、アニメ、声優、漫画が好きな人物である。</span><br />
+            <span>好きな声優は、巽悠衣子である。</span><br />
+            <span>「さくら荘のペットな彼女」を読み、プログラマーになることを決意。</span><br />
+            <span>Live2Dに憧れ、Live2Dライクなオープンソースソフトウェアを専門学校２年生のときに開発。</span><br />
+            <span>Macには、ステッカー貼る勢。</span><br />
+            <span>将来、どういうことをしたいのかまだ定まっていない様子。</span>
           </div>
         </section>
-        <section id="activity">
-          <h2 class="area-title">Activity</h2>
-          <p class="area-desc">私の活動や成果を公開。</p>
-          <div class="inner">
-            <a href="http://qiita.com/yuki540/items/13c6adc831a386445a3e" class="activity-li">
-              <img src="images/activity/chrome-security.png" />
-              <h3>Chrome拡張を用いたTwitterアカウントの奪取</h3>
-              <p>Chrome拡張のマルウェアの話題が上がったので、Chrome拡張の危険性を試してみた。
-                <br>
-                題材は、Chrome拡張を用いたTwitterアカウントの奪取。</p>
-            </a>
-            <a href="http://qiita.com/yuki540/items/bd122f4105eb6dc4c9c4" class="activity-li">
-              <img src="images/activity/wakaba.png" />
-              <h3>ElectronでPC画面上にコメントが流せるデスクトップアプリを作ってみた</h3>
-              <p>PC画面上にコメントが流せるデスクトップアプリ「wakaba」の記事をQiitaで書いた。
-                <br>
-                割と、好評で作った甲斐があった。</p>
-            </a>
-            <a href="http://niconare.nicovideo.jp/watch/kn2342" class="activity-li">
-              <img src="images/activity/live2d_like.png" />
-              <h3>Live2Dライクなオープンソースソフトウェアの開発</h3>
-              <p>在学中の専門学校での作品発表会。
-                <br>
-                学科代表（IT学科）で「Live2Dライクなオープンソースソフトウェアの開発」という内容で登壇。
-                <br>
-                発表に使ったスライドは、ニコナレにて公開。</p>
-            </a>
-            <a href="https://twitter.com/eriri_jp/status/794745927856635904" class="activity-li">
-              <img src="images/activity/calil.png" />
-              <h3>カーリルの脆弱性報告</h3>
-              <p>日本最大の図書館検索サイト「カーリル」の脆弱性を報告。
-                <br>
-                お礼の品として、「カーリル」オリジナルのマグカップとコーヒーパックをもらう。</p>
-            </a>
-          </div>
+
+        <!-- ***************************** Product ******************************* -->
+        <h2 class="title" id="product">Product</h2>
+        <p class="description">yuki540が製作したものを公開。</p>
+
+        <section class="product">
+          <a class="product-li"
+            href="https://github.com/yuki540net/satella.io">
+            <img src="images/product/satella.io.png" alt="satella.io" />
+            <h3>satella.io</h3>
+            <h5>Live2Dライクなオープンソースソフトウェア</h5>
+            <p class="desc">
+              「絵を動かす。心を動かす。」<br />
+              「イラストに命を吹き込む」技術を開発し、OSSとして公開することは、私にとっていい経験になりました。<br />
+              このソフトウェアが、誰かにとっての技術的なヒントになることを祈ります。<br />
+              satella.ioは、「satella.pro」に改名し、さらなる進化にご期待ください。
+            </p>
+            <span>Live2D</span><span>Electron</span><span>CoffeeScript</span>
+            <p class="datetime">2017/02/05</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/Shuvi">
+            <img src="images/product/shuvi.png" alt="Shuvi" />
+            <h3>Shuvi</h3>
+            <h5>フレームレスなYouTubeプレイヤー</h5>
+            <p class="desc">
+              Shuviの特徴は、設計そのもののシンプルさです。<br />
+              MacのQuickTime PlayerのようなUIに、フレームレスなウィンドウを兼ね添えています。<br />
+              Shuviは、大きさや形にとらわれることなく、リサイズすることができます。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>YouTube</span><span>Electron</span><span>CoffeeScript</span>
+            <p class="datetime">2017/05/13</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/wakaba">
+            <img src="images/product/wakaba.png" alt="若葉" />
+            <h3>若葉</h3>
+            <h5>PC画面上にコメントが流せるデスクトップアプリ</h5>
+            <p class="desc">
+              「若葉」は、PC画面上にコメントが流せるElectron製のデスクトップアプリです。<br />
+              コメントはTwitterから特定のキーワードを含むツイートを取得して流します。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>Twitter</span><span>Electron</span><span>CoffeeScript</span>
+            <p class="datetime">2017/03/19</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/toa">
+            <img src="images/product/toa.png" alt="兎亜" />
+            <h3>兎亜</h3>
+            <h5>シンプルで可愛いミュージックプレイヤー</h5>
+            <p class="desc">
+              「ミュージックプレイヤーとしての最良の選択。」<br />
+              選択したディレクトリ内のmp3ファイルを再生するという、シンプルな設計のソフトウェアです。<br />
+              コンパクトなウィンドウサイズなので、デスクトップでの作業スペースを奪うことなく配置できます。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>Music</span><span>Electron</span><span>CoffeeScript</span>
+            <p class="datetime">2017/04/08</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/ontama">
+            <img src="images/product/ontama.png" alt="音卵" />
+            <h3>音卵</h3>
+            <h5>声優ラジオ音泉をダウンロードするAndroidアプリ</h5>
+            <p class="desc">
+              音卵は、Cordovaで作られたAndroidアプリです。<br />
+              声優ラジオ音泉をダウンロードすることが可能です。<br />
+              Google Playにて公開。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>音泉</span><span>Electron</span><span>CoffeeScript</span>
+            <p class="datetime">2017/04/15</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/onsen-downloader">
+            <img src="images/product/onsen-downloader.png" alt="音泉ダウンローダー" />
+            <h3>音泉ダウンローダー</h3>
+            <h5>声優ラジオサイト「音泉」ダウンロード用Chrome拡張</h5>
+            <p class="desc">
+              声優ラジオサイト「音泉」の音声・動画ファイルをダウンロードするChrome拡張です。<br />
+              APIサーバにはonsen-nodeを使用しています。<br />
+              Chromeウェブストアにて公開。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>音泉</span><span>Chrome拡張</span><span>JavaScript</span>
+            <p class="datetime">2017/02/25</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/onsen-node">
+            <img src="images/product/onsen-node.png" alt="onsen-node" />
+            <h3>onsen-node</h3>
+            <h5>声優ラジオ「音泉」APIライブラリ for Node</h5>
+            <p class="desc">
+              声優ラジオサイト「音泉」のAPIライブラリです。<br />
+              「Node.js」から簡単に「音泉」の情報にアクセスすることが可能です。<br />
+              コマンドライン上でも動作します。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>Library</span><span>npm</span><span>CoffeeScript</span>
+            <p class="datetime">2017/02/25</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/onsen-php">
+            <img src="images/product/onsen-php.png" alt="onsen-php" />
+            <h3>onsen-php</h3>
+            <h5>声優ラジオ「音泉」APIライブラリ for PHP</h5>
+            <p class="desc">
+              声優ラジオサイト「音泉」のAPIライブラリです。<br />
+              「PHP」から簡単に「音泉」の情報にアクセスすることが可能です。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>Library</span><span>Composer</span><span>PHP</span>
+            <p class="datetime">2017/02/25</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/nicoJS">
+            <img src="images/product/nicoJS.png" alt="nicoJS" />
+            <h3>nicoJS</h3>
+            <h5>ニコニコ風コメントを実装するライブラリ</h5>
+            <p class="desc">
+              ニコニコ動画風のコメントを実装するライブラリです。<br />
+              Webサイトなどに簡単に組み込むことが可能です。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>Library</span><span>npm</span><span>CoffeeScript</span>
+            <p class="datetime">2016/09/25</p>
+          </a>
+
+          <a class="product-li"
+            href="https://github.com/yuki540net/web-icon-node">
+            <img src="images/product/web-icon-node.png" alt="web-icon-node" />
+            <h3>web-icon-node</h3>
+            <h5>Webクリップアイコンを取得するライブラリ</h5>
+            <p class="desc">
+              Webクリップアイコンやファビコンなどのリンクを取得するライブラリです。<br />
+              npm上で公開中。<br />
+              Python・PHP版も公開予定。<br />
+              ソースコードはGitHub上で公開。
+            </p>
+            <span>Library</span><span>npm</span><span>CoffeeScript</span>
+            <p class="datetime">2017/03/28</p>
+          </a>
+
+          <a class="product-li"
+            href="product/oregairu">
+            <img src="images/product/oregairu.png" alt="oregairu" />
+            <h3>俺ガイル非公式サイト</h3>
+            <h5>「俺は、本物が欲しい。」</h5>
+            <p class="desc">
+              「やはり、俺の青春ラブコメはまちがっている。」の非公式サイトです。<br />
+              俺ガイル好きのyuki540が衝動で作ったサイトです。<br />
+              俺ガイルの世界観のような儚げなデザインが特徴です。
+            </p>
+            <span>Web_Desin</span><span>俺ガイル</span>
+            <p class="datetime">2016/03/20</p>
+          </a>
+
+          <a class="product-li"
+            href="http://www.nicovideo.jp/watch/sm26374280">
+            <img src="images/product/colorful_step.png" alt="oregairu" />
+            <h3>COLORFUL_STEP</h3>
+            <h5>待ち望んだ全ては----そこにあるの</h5>
+            <p class="desc">
+              「やはり、俺の青春ラブコメはまちがっている。」のMADです。<br />
+              動画編集に没頭していた頃の作品です。<br />
+              曲はClariSの「STEP」で、静止画とアニメを組み合わせて、俺ガイルの世界観をカラフルに表現しています。
+            </p>
+            <span>動画</span><span>俺ガイル</span><span>MAD</span>
+            <p class="datetime">2016/03/20</p>
+          </a>
         </section>
+
+        <!-- ***************************** Activity ****************************** -->
+        <h2 class="title" id="activity">Activity</h2>
+        <p class="description">私の活動や成果を公開。</p>
+
+        <section class="product">
+          <a class="product-li"
+            href="http://qiita.com/yuki540/items/13c6adc831a386445a3e">
+            <img src="images/activity/chrome-security.png" alt="security" />
+            <h3>Chrome拡張を用いたTwitterアカウントの奪取</h3>
+            <p class="desc">
+              Chrome拡張のマルウェアの話題が上がったので、Chrome拡張の危険性を試してみた。<br />
+              題材は、Chrome拡張を用いたTwitterアカウントの奪取。
+            </p>
+            <span>セキュリティ</span><span>Chrome拡張</span>
+            <p class="datetime">2017/04/08</p>
+          </a>
+
+          <a class="product-li"
+            href="http://qiita.com/yuki540/items/bd122f4105eb6dc4c9c4">
+            <img src="images/activity/wakaba.png" alt="wakaba" />
+            <h3>ElectronでPC画面上にコメントが流せるデスクトップアプリを作ってみた</h3>
+            <p class="desc">
+              PC画面上にコメントが流せるデスクトップアプリ「wakaba」の記事をQiitaで書いた。<br />
+              割と、好評で作った甲斐があった。
+            </p>
+            <span>Qiita</span>
+            <p class="datetime">2017/03/19</p>
+          </a>
+
+          <a class="product-li"
+            href="http://niconare.nicovideo.jp/watch/kn2342">
+            <img src="images/activity/live2d_like.png" alt="satella.io" />
+            <h3>ElectronでPC画面上にコメントが流せるデスクトップアプリを作ってみた</h3>
+            <p class="desc">
+              在学中の専門学校での作品発表会。<br />
+              学科代表（IT学科）で「Live2Dライクなオープンソースソフトウェアの開発」という内容で登壇。<br />
+              発表に使ったスライドは、ニコナレにて公開。
+            </p>
+            <span>プレゼン</span><span>ニコナレ</span><span>Live2D</span>
+            <p class="datetime">2017/02/26</p>
+          </a>
+
+          <a class="product-li"
+            href="https://twitter.com/eriri_jp/status/794745927856635904">
+            <img src="images/activity/calil.png" alt="calil" />
+            <h3>日本最大の図書館検索サイト カーリルの脆弱性報告</h3>
+            <p class="desc">
+              日本最大の図書館検索サイト「カーリル」の脆弱性を報告。<br />
+              お礼の品として、「カーリル」オリジナルのマグカップとコーヒーパックをもらう。
+            </p>
+            <span>XSS</span><span>セキュリティ</span>
+            <p class="datetime">2017/02/26</p>
+          </a>
+        </section>
+
+        <!-- ***************************** News ********************************** -->
+        <h2 class="title" id="news">News</h2>
+        <p class="description">ちょっとした出来事をお知らせ。</p>
+
+        <section class="news">
+          <p>暑くなってきたので、北海道バニラを毎日食べてます。</p>
+          <p>髪切りました。</p>
+          <p>Galaxy_S7_Edgeを購入。</p>
+          <p>新型MacBook_Proを購入(タッチバーなし)。</p>
+          <p>satella.ioをオープンソースとして公開。</p>
+        </section>
+
+        <!-- ***************************** Contact ******************************* -->
+        <h2 class="title" id="contact">Contact</h2>
+        <p class="description">気軽にお声掛け下さい。</p>
+
+        <section class="contact">
+          <a href="https://twitter.com/eriri_jp" class="icon twitter"></a>
+          <a href="https://github.com/yuki540net" class="icon github"></a>
+          <a href="http://qiita.com/yuki540" class="icon qiita"></a>
+        </section>
+
       </article>
       <footer id="footer">
-
+        <p>Copyright 2017 yuki540 Some rights reserved.</p>
       </footer>
     </main>
     <script>
