@@ -59,36 +59,28 @@ a {
 .main-visual {
 	position: relative;
 	width: 100%;
-	height: 100px;
+	height: 150px;
 	background-image: url(../../images/main_visual/bg.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: center bottom;
 	margin-top: 40px;
-}
-.main-visual .chara {
-	position: absolute;
-	width: 100%;
-	height: 100px;
-	background-image: url(../../images/main_visual/char.png);
-	background-size: auto 100%;
-	background-position: right center;
-	background-repeat: no-repeat; 
+	box-shadow: 0 0 10px #ccc inset;
 }
 .main-visual .box {
 	position: absolute;
 	width: 100%;
-	height: 100px;
+	height: 150px;
 }
 .main-visual .box .inner {
 	width: 100%;
-	height: 100px;
+	height: 150px;
 	margin: 0 auto;
 }
 .main-visual .box .inner img {
-	height: 60px;
+	height: 80px;
 	display: block;
-	margin-top: 20px;
-	margin-left: 10px;
+	margin: 35px auto;
+	background-color: rgba(255,255,255,0.5);
 }
 
 /*** profile ***/
@@ -108,7 +100,7 @@ a {
 .card .header {
 	width: 350px;
 	height: 200px;
-	background-image: url(../../images/main_visual/1.jpg);
+	background-image: url(../../images/activity/calil.png);
 	background-size: cover;
 	background-position: center;
 }
@@ -282,12 +274,16 @@ a {
  */
 #footer {
 	width: 100%;
-	padding: 50px 0;
-	background-color: #222;
+	padding: 70px 0;
+	background-image: url(../../images/main_visual/bg.jpg);
+	background-size: cover;
+	background-position: center bottom;
 	margin-top: 50px;
+	box-shadow: 0 0 10px #ccc inset;
 }
 #footer p {
-	font-size: 12px;
+	font-size: 10px;
 	color: #fff;
+	text-shadow: 0 0 10px #111;
 	text-align: center;
 }

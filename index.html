@@ -47,9 +47,54 @@
         height: 80px;
       }
     }
+    .modal-view {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 100;
+    }
+    .modal-view[data-state="passive"] { animation: fadeout 1s ease 0s forwards; }
+    @keyframes fadeout {
+      0%   { opacity: 1; } 
+      100% { opacity: 0; }
+    }
     </style>
+    <script type="text/javascript">
+    let load = 0
+    ,   size = 5
+    for(let i=1; i <= size; i++) {
+      let img    = new Image()
+      img.src    = 'images/main_visual/' + i + '.png'
+      img.onload = function() {
+        load += 1
+        if(load >= 5) {
+          animate()
+
+          let modal = document.querySelector('.modal-view')
+          modal.setAttribute('data-state', 'passive')
+          setTimeout(function() { modal.style.display = 'none' }, 1000)
+        }
+      }
+    }
+
+    function animate() {
+      let count = 1
+      ,   logo  = document.querySelector('#main-logo')
+      setInterval(function() {
+        count += 1
+        if(size < count)
+          count = 1
+
+        logo.src = 'images/main_visual/' + count + '.png'
+      }, 150)
+    }
+    </script>
   </head>
   <body>
+    <div class="modal-view"></div>
     <a href="http://yuki540.hatenablog.jp" class="blog"></a>
     <main id="application">
       <header id="header">
@@ -68,10 +113,9 @@
       </header>
       <article id="content">
         <section class="main-visual">
-          <div class="chara"></div>
           <div class="box">
             <div class="inner">
-              <img src="images/main_visual/logo-large.png" />
+              <img src="images/main_visual/1.png" id="main-logo" />
             </div>
           </div>
         </section>
@@ -91,7 +135,7 @@
           </div>
           <div class="like">
             <h3>Language</h3>
-            <span>CoffeeScript</span><span>JavaScript</span><span>Python</span><span>PHP</span><span>HTML5</span><span>CSS3</span>
+            <span>CoffeeScript</span><span>JavaScript</span><span>Ruby</span><span>Python</span><span>PHP</span><span>HTML5</span><span>CSS3</span>
             <h3>Like</h3>
             <span>Live2D</span><span>Electron</span><span>Cordova</span><span>Riot.js</span><span>Node.js</span>
             <h3>Device</h3>
@@ -335,7 +379,7 @@
           <a class="product-li"
             href="http://niconare.nicovideo.jp/watch/kn2342">
             <img src="images/activity/live2d_like.png" alt="satella.io" />
-            <h3>ElectronでPC画面上にコメントが流せるデスクトップアプリを作ってみた</h3>
+            <h3>Live2Dライクなオープンソースソフトウェアの開発</h3>
             <p class="desc">
               在学中の専門学校での作品発表会。<br />
               学科代表（IT学科）で「Live2Dライクなオープンソースソフトウェアの開発」という内容で登壇。<br />
