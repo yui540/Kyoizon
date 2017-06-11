@@ -22,80 +22,41 @@
     <link rel="shortcut icon" href="images/profile/yuki540.png">
     <link rel="apple-touch-icon" href="images/profile/yuki540.png">
     <title>人生送りバント。</title>
-    <style type="text/css">
-    .blog {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background-image: url(images/blog.png);
-        background-size: 60%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #fff;
-        box-shadow: 0 0 10px #999;
-        border-radius: 50%;
-      }
-    @media screen and (max-width: 480px) {
-      .blog {
-        width: 60px;
-        height: 60px;
-      }
-    }
-    @media screen and (min-width: 481px) {
-      .blog {
-        width: 80px;
-        height: 80px;
-      }
-    }
-    .modal-view {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      z-index: 100;
-    }
-    .modal-view[data-state="passive"] { animation: fadeout 1s ease 0s forwards; }
-    @keyframes fadeout {
-      0%   { opacity: 1; } 
-      100% { opacity: 0; }
-    }
-    </style>
     <script type="text/javascript">
-    let load = 0
-    ,   size = 5
-    for(let i=1; i <= size; i++) {
-      let img    = new Image()
-      img.src    = 'images/main_visual/' + i + '.png'
-      img.onload = function() {
-        load += 1
-        if(load >= 5) {
-          animate()
+    window.addEventListener('load', function() {
+      let menu = document.getElementById('menu-icon')
+      ,   nav  = document.getElementById('smart-nav')
+      nav.style.height = (screen.height - 40) + 'px'
 
-          let modal = document.querySelector('.modal-view')
-          modal.setAttribute('data-state', 'passive')
-          setTimeout(function() { modal.style.display = 'none' }, 1000)
+      menu.onclick = function() {
+        let state = menu.getAttribute('data-state')
+        if(state === 'active') {
+          menu.setAttribute('data-state', 'passive')
+          nav.setAttribute('data-state', 'passive')
+        } else {
+          menu.setAttribute('data-state', 'active')
+          nav.setAttribute('data-state', 'active')
         }
       }
-    }
 
-    function animate() {
-      let count = 1
-      ,   logo  = document.querySelector('#main-logo')
-      setInterval(function() {
-        count += 1
-        if(size < count)
-          count = 1
+      nav.onclick = function() {
+        menu.setAttribute('data-state', 'passive')
+        nav.setAttribute('data-state', 'passive')
+      }
 
-        logo.src = 'images/main_visual/' + count + '.png'
-      }, 250)
-    }
+      window.link = function(url) {
+        menu.setAttribute('data-state', 'passive')
+        nav.setAttribute('data-state', 'passive')
+        location.href = url
+      }
+    }, false)
+    window.addEventListener('load', function() {
+      let nav  = document.getElementById('smart-nav')
+      nav.style.height = (screen.height - 40) + 'px'
+    }, false)
     </script>
   </head>
   <body>
-    <div class="modal-view"></div>
-    <a href="http://yuki540.hatenablog.jp" class="blog"></a>
     <main id="application">
       <header id="header">
         <div class="inner">
@@ -103,20 +64,33 @@
             <img src="images/logo.png" alt="ロゴ">
           </a>
           <nav id="global-nav">
+            <a href="http://yuki540.hatenablog.jp" class="nav-li">Blog</a>
             <a href="#profile" class="nav-li">Profile</a>
             <a href="#product" class="nav-li">Product</a>
             <a href="#activity" class="nav-li">Activity</a>
             <a href="#news" class="nav-li">News</a>
             <a href="#contact" class="nav-li">Contact</a>
           </nav>
+          <div id="menu-icon">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <nav id="smart-nav">
+            <div class="inner">
+              <a onclick="link('http://yuki540.hatenablog.jp')" class="nav-li">Blog</a>
+              <a onclick="link('#profile')" class="nav-li">Profile</a>
+              <a onclick="link('#product')" class="nav-li">Product</a>
+              <a onclick="link('#activity')" class="nav-li">Activity</a>
+              <a onclick="link('#news')" class="nav-li">News</a>
+              <a onclick="link('#contact')" class="nav-li">Contact</a>
+            </div>
+          </nav>
         </div>
       </header>
       <article id="content">
         <section class="main-visual">
           <div class="box">
-            <div class="inner">
-              <img src="images/main_visual/1.png" id="main-logo" />
-            </div>
           </div>
         </section>
         <!-- ***************************** Profile ******************************* -->

@@ -41,7 +41,7 @@ a {
 /*** global-nav ***/
 #global-nav {
 	float: right;
-	width: 400px; height: 40px;
+	width: 480px; height: 40px;
 }
 #global-nav:after {
 	content: ""; display: block; clear: both;
@@ -58,6 +58,12 @@ a {
 	color: #fff;
 	background-color: #000;
 }
+
+/*** smart nav ***/
+#smart-nav { display: none; }
+
+/*** menu icon ***/
+#menu-icon { display: none;  }
 
 /**
  * content

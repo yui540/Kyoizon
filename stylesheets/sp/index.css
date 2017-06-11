@@ -18,22 +18,108 @@ a {
 	background-color: #222;
 	z-index: 10;
 }
+#header:after {
+	content: ""; display: block; clear: both;
+}
 
 /*** logo ***/
 #logo {
+	float: left;
 	display: block;
-	width: 200px; height: 40px;
+	width: 170px; height: 40px;
 	margin: 0 auto;
 }
 #logo img {
-	height: 30px;
+	height: 25px;
 	display: block;
-	margin: 5px auto;
+	margin: 7.5px auto;
 }
 
 /*** global-nav ***/
 #global-nav {
 	display: none;
+}
+
+/*** menu icon ***/
+#menu-icon {
+	float: right;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	margin: 5px;
+	overflow: hidden;
+}
+.line {
+	position: absolute;
+	left: 5px;
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+}
+.line1 { top: 7px; }
+.line2 { top: 14.5px; }
+.line3 { top: 22px; }
+#menu-icon[data-state="passive"] .line1 { animation: open-line-1 0.5s ease 0s forwards; }
+#menu-icon[data-state="passive"] .line2 { animation: open-line-2 0.5s ease 0s forwards; }
+#menu-icon[data-state="passive"] .line3 { animation: open-line-3 0.5s ease 0s forwards; }
+@keyframes open-line-1 {
+	0%   { top: 14.5px; transform: rotate(45deg); }
+	100% { top: 7px; transform: rotate(0deg); }
+}
+@keyframes open-line-2 {
+	0%   { left: 30px; }
+	100% { left: 5px; }
+}
+@keyframes open-line-3 {
+	0%   { top: 14.5px; transform: rotate(-45deg); }
+	100% { top: 22px; transform: rotate(0deg); }
+}
+#menu-icon[data-state="active"] .line1 { animation: close-line-1 0.5s ease 0s forwards; }
+#menu-icon[data-state="active"] .line2 { animation: close-line-2 0.5s ease 0s forwards; }
+#menu-icon[data-state="active"] .line3 { animation: close-line-3 0.5s ease 0s forwards; }
+@keyframes close-line-1 {
+	0%   { top: 7px; transform: rotate(0deg); }
+	100% { top: 14.5px; transform: rotate(45deg); }
+}
+@keyframes close-line-2 {
+	0%   { left: 5px; }
+	100% { left: 30px; }
+}
+@keyframes close-line-3 {
+	0%   { top: 22px; transform: rotate(0deg); }
+	100% { top: 14.5px; transform: rotate(-45deg); }
+}
+
+/*** smart nav ***/
+#smart-nav {
+	position: fixed;
+	top: 40px;
+	right: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+#smart-nav .inner {
+	position: absolute;
+	top: 0; right: 0;
+	width: 70%; height: 100%;
+	background-color: #333;
+}
+#smart-nav .inner .nav-li {
+	font-size: 16px;
+	display: block;
+	color: #ccc;
+	margin: 10px 10px;
+	box-sizing: border-box;
+	border-bottom: dashed 1px #ccc;
+}
+#smart-nav[data-state="active"] { display: block; }
+#smart-nav[data-state="passive"] { display: none; }
+#smart-nav[data-state="active"] .inner { animation: show-smart-menu 0.5s ease 0s forwards; }
+@keyframes show-smart-menu {
+	0%   { right: -70%; }
+	100% { right: 0; }
 }
 
 /**
@@ -89,8 +175,7 @@ a {
 	margin: 0 auto;
 }
 .card {
-	width: 90%;
-	height: 400px;
+	width: 80%;
 	background-color: #fff;
 	border-radius: 3px;
 	box-shadow: 0 0 10px #ccc;
@@ -98,8 +183,8 @@ a {
 	margin: 0 auto;
 }
 .card .header {
-	width: 350px;
-	height: 200px;
+	width: 100%;
+	height: 150px;
 	background-image: url(../../images/activity/calil.png);
 	background-size: cover;
 	background-position: center;
@@ -116,11 +201,11 @@ a {
 	box-sizing: border-box;
 }
 .card h2 {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 }
 .card p {
-	width: 300px;
+	width: 80%;
 	margin: 0 auto;
 	margin-bottom: 5px;
 	font-size: 12px;
@@ -176,7 +261,7 @@ a {
 	width: 100%;
 }
 .product .product-li {
-	width: 90%;
+	width: 80%;
 	display: block;
 	transition: all 0.3s ease 0s;
 	margin: 0 auto;
@@ -192,19 +277,19 @@ a {
 	border: solid 1px 
 }
 .product .product-li h3 {
-	font-size: 26px;
+	font-size: 20px;
 	color: #4c4c4c;
 	margin-top: 5px;
 	border-bottom: solid 1px #4c4c4c;
 }
 .product .product-li h5 {
-	font-size: 14px;
+	font-size: 12px;
 	text-align: right;
 	color: #4c4c4c;
 	margin: 5px 0;
 }
 .product .product-li .desc {
-	font-size: 12px;
+	font-size: 10px;
 	color: #999;
 	margin-top: 10px;
 	line-height: 20px;
