@@ -64,7 +64,38 @@
           }
         }
       }
+
+      let menu = document.getElementsByClassName('menu-icon')[0]
+      ,   nav  = document.getElementById('smart-nav')
+      nav.style.height = (screen.height - 40) + 'px'
+
+      menu.onclick = function() {
+        let state = menu.getAttribute('data-state')
+        if(state === 'active') {
+          menu.setAttribute('data-state', 'passive')
+          nav.setAttribute('data-state', 'passive')
+        } else {
+          menu.setAttribute('data-state', 'active')
+          nav.setAttribute('data-state', 'active')
+        }
+      }
+
+      nav.onclick = function() {
+        menu.setAttribute('data-state', 'passive')
+        nav.setAttribute('data-state', 'passive')
+      }
+
+      window.link = function(url) {
+        menu.setAttribute('data-state', 'passive')
+        nav.setAttribute('data-state', 'passive')
+        location.href = url
+      }
 		})
+
+    window.addEventListener('resize', function() {
+      let nav  = document.getElementById('smart-nav')
+      nav.style.height = (screen.height - 40) + 'px'
+    }, false)
 		</script>
   </head>
   <body>
@@ -88,6 +119,35 @@
           	<a class="sns-li twitter" target="_blank" href="https://twitter.com/eriri_jp?lang=ja"></a>	
           	<a class="sns-li qiita" target="_blank" href="http://qiita.com/yuki540"></a>	
           </nav>
+          <div class="menu-icon">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <div id="smart-nav">
+            <div class="inner">
+              <a onclick="link('#profile')" class="nav-li nav-1">
+                <p>1._Profile</p>
+                <h4>「私について」</h4>
+              </a>
+              <a onclick="link('#product')" class="nav-li nav-2">
+                <p>2._Product</p>
+                <h4>「作ってきたもの」</h4>
+              </a>
+              <a onclick="link('#activity')" class="nav-li nav-3">
+                <p>3._Activity</p>
+                <h4>「今までの成果を公開」</h4>
+              </a>
+              <a onclick="link('#work')" class="nav-li nav-4">
+                <p>4._Work</p>
+                <h4>「今までとこれからの活動」</h4>
+              </a>
+              <a onclick="link('#use')" class="nav-li nav-5">
+                <p>5._Use</p>
+                <h4>「使用しているサービス」</h4>
+              </a>
+            </div>
+          </div>
         </div>
       </header>
       <article id="content">
@@ -95,7 +155,7 @@
           <div class="box">
 						<div class="bg"></div>
 						<div class="char"></div>
-						<div class="text"></div>
+						<div class="inner"><div class="text"></div></div>
           </div>
 					<div class="mask"></div>
 					<nav class="global-nav">
@@ -454,9 +514,11 @@
       </article>
       <footer id="footer">
         <div class="inner">
-          <div class="text"></div>
           <img src="./images/footer/char.png" />
-          <div class="copyright">Copyright 2017 yuki540 Some rights reserved.</div>
+          <div class="wrap">
+            <div class="text"></div>
+            <div class="copyright">Copyright 2017 yuki540 Some rights reserved.</div>
+          </div>
         </div>
         <div class="mask"></div>
       </footer>
