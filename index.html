@@ -6,14 +6,14 @@
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta name="author" content="yuki540">
-    <meta name="description" content="yuki540の人生送りバント。">
-    <meta name="generator" content="Sublime Text">
+    <meta name="description" content="yuki540のポートフォリオサイト。">
+    <meta name="generator" content="vim">
     <meta name="copyright" content="&amp;copy;yuki540">
     <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@eriri_jp" />
-    <meta name="twitter:title" content="人生送りバント。" />
-    <meta name="twitter:description" content="yuki540の人生送りバント。" />
+    <meta name="twitter:title" content="YUKI540.COM" />
+    <meta name="twitter:description" content="yuki540のポートフォリオサイト。" />
     <meta name="twitter:image" content="http://yuki540.com/images/profile/yuki540.png" />
     <link rel="stylesheet" type="text/css" href="stylesheets/font.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/base.css">
@@ -21,115 +21,154 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/pc/index.css" media="screen and (min-width: 481px)">
     <link rel="shortcut icon" href="images/profile/yuki540.png">
     <link rel="apple-touch-icon" href="images/profile/yuki540.png">
-    <title>人生送りバント。</title>
+    <title>YUKI540.COM</title>
     <script type="text/javascript">
-    window.addEventListener('load', function() {
-      let menu = document.getElementById('menu-icon')
-      ,   nav  = document.getElementById('smart-nav')
-      nav.style.height = (screen.height - 40) + 'px'
+		window.addEventListener('load', function() {
+			let nav_li = document.getElementsByClassName('nav-li')
+			,   timer  = null
+			
+			for(let i=0; i < nav_li.length; i++) {
+				/* mouse over ------------------------------------------------------ */
+				nav_li[i].addEventListener('mouseover', function() {
+					this.setAttribute('data-state', 'active')
+				})
 
-      menu.onclick = function() {
-        let state = menu.getAttribute('data-state')
-        if(state === 'active') {
-          menu.setAttribute('data-state', 'passive')
-          nav.setAttribute('data-state', 'passive')
-        } else {
-          menu.setAttribute('data-state', 'active')
-          nav.setAttribute('data-state', 'active')
+				/* mouse out ------------------------------------------------------- */
+				nav_li[i].addEventListener('mouseout', function() {
+					this.setAttribute('data-state', 'passive')
+				})
+			}
+
+      let images = [
+        './images/main_visual/v_bg.png',
+        './images/main_visual/v_char.png',
+        './images/main_visual/v_text.png',
+        './images/footer/char.png',
+        './images/footer/text.png'
+      ],  count = 0
+
+      for(let i=0; i < images.length; i++) {
+        let img    = new Image()
+        img.src    = images[i]
+        img.onload = function() {
+          count += 1
+          if(count >= images.length) {
+            document.getElementsByClassName('modal')[0]
+              .setAttribute('data-state', 'active')
+            document.getElementById('application').style.display = 'block'
+            setTimeout(function(){ 
+              document.getElementsByClassName('modal')[0].style.display = 'none'
+              document.getElementsByClassName('main-visual')[0]
+                .setAttribute('data-state', 'active')
+            }, 1000)
+          }
         }
       }
-
-      nav.onclick = function() {
-        menu.setAttribute('data-state', 'passive')
-        nav.setAttribute('data-state', 'passive')
-      }
-
-      window.link = function(url) {
-        menu.setAttribute('data-state', 'passive')
-        nav.setAttribute('data-state', 'passive')
-        location.href = url
-      }
-    }, false)
-    window.addEventListener('load', function() {
-      let nav  = document.getElementById('smart-nav')
-      nav.style.height = (screen.height - 40) + 'px'
-    }, false)
-    </script>
+		})
+		</script>
   </head>
   <body>
+    <div class="modal">
+      <div class="inner">
+        <div class="box">
+          <div class="rect black"></div>
+          <div class="rect white"></div>
+          <div class="icon"></div>
+        </div>
+      </div>
+    </div>
     <main id="application">
       <header id="header">
         <div class="inner">
           <a id="logo" href="/">
-            <img src="images/logo.png" alt="ロゴ">
+            <img src="images/yuki540-logo.png" alt="ロゴ">
           </a>
-          <nav id="global-nav">
-            <a href="http://yuki540.hatenablog.jp" class="nav-li">Blog</a>
-            <a href="#profile" class="nav-li">Profile</a>
-            <a href="#product" class="nav-li">Product</a>
-            <a href="#activity" class="nav-li">Activity</a>
-            <a href="#news" class="nav-li">News</a>
-            <a href="#contact" class="nav-li">Contact</a>
-          </nav>
-          <div id="menu-icon">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-          </div>
-          <nav id="smart-nav">
-            <div class="inner">
-              <a onclick="link('http://yuki540.hatenablog.jp')" class="nav-li">Blog</a>
-              <a onclick="link('#profile')" class="nav-li">Profile</a>
-              <a onclick="link('#product')" class="nav-li">Product</a>
-              <a onclick="link('#activity')" class="nav-li">Activity</a>
-              <a onclick="link('#news')" class="nav-li">News</a>
-              <a onclick="link('#contact')" class="nav-li">Contact</a>
-            </div>
+          <nav id="sns-navigation">
+          	<a class="sns-li github" target="_blank" href="https://github.com/yuki540net"></a>	
+          	<a class="sns-li twitter" target="_blank" href="https://twitter.com/eriri_jp?lang=ja"></a>	
+          	<a class="sns-li qiita" target="_blank" href="http://qiita.com/yuki540"></a>	
           </nav>
         </div>
       </header>
       <article id="content">
         <section class="main-visual">
           <div class="box">
+						<div class="bg"></div>
+						<div class="char"></div>
+						<div class="text"></div>
           </div>
+					<div class="mask"></div>
+					<nav class="global-nav">
+						<div class="ball-box">
+							<div class="ball ball-1"></div>
+							<div class="ball ball-2"></div>
+							<div class="ball ball-3"></div>
+							<div class="ball ball-4"></div>
+							<div class="ball ball-5"></div>
+						</div>
+						<a href="#profile" class="nav-li nav-1">
+							<p>1._Profile</p>
+							<h4>「私について」</h4>
+						</a>
+						<a href="#product" class="nav-li nav-2">
+							<p>2._Product</p>
+							<h4>「作ってきたもの」</h4>
+						</a>
+						<a href="#activity" class="nav-li nav-3">
+							<p>3._Activity</p>
+							<h4>「今までの成果を公開」</h4>
+						</a>
+						<a href="#work" class="nav-li nav-4">
+							<p>4._Work</p>
+							<h4>「今までとこれからの活動」</h4>
+						</a>
+						<a href="#use" class="nav-li nav-5">
+							<p>5._Use</p>
+							<h4>「使用しているサービス」</h4>
+						</a>
+					</nav>
         </section>
-        <!-- ***************************** Profile ******************************* -->
-        <h2 class="title" id="profile">Profile</h2>
-        <p class="description">私、yuki540はこんな人物です。</p>
-
+				<div class="title" id="profile">
+					<div class="large">私</div>
+					<div class="more">について</div>
+					<div class="small">1._Profile</div>
+				</div>
         <section class="profile">
-          <div class="card">
-            <div class="header"></div>
-            <div class="icon"></div>
-            <h2>yuki540</h2>
-            <p>Age: 20</p>
-            <p>Birthday: 1996.11.09</p>
-            <p>Location: Wakayama, Japan</p>
-            <p>Job: 専門学生（3年生）</p>
+          <div class="box iam">
+            <div class="rect y">Y</div>
+            <div class="rect u">U</div>
+            <div class="rect yuki540"></div>
+            <div class="rect k">K</div>
+            <div class="rect i">I</div>
           </div>
-          <div class="like">
-            <h3>Language</h3>
-            <span>CoffeeScript</span><span>JavaScript</span><span>Ruby</span><span>Python</span><span>PHP</span><span>HTML5</span><span>CSS3</span>
-            <h3>Like</h3>
-            <span>Live2D</span><span>Electron</span><span>Cordova</span><span>Riot.js</span><span>Node.js</span>
-            <h3>Device</h3>
-            <span>MacBook_Pro</span><span>Galaxy_S7_Edge</span><span>Raspberry_PI</span>
+          <div class="box category">
+            <h3>_name</h3>
+            <p>yuki540</p>
+            <h3>_age</h3>
+            <p>20</p>
+            <h3>_birthday</h3>
+            <p>1996/11/09</p>
+            <h3>_location</h3>
+            <p>Wakayama, Japan</p>
+            <h3>_job</h3>
+            <p>専門学生(3年)</p>
+            <h3>_likes</h3>
+            <p>Live2D, Electron, Cordova, Node.js, xss</p>
           </div>
-          <div class="story">
-            <h2>About</h2>
-            <span>私、yuki540は、アニメ、声優、漫画が好きな人物である。</span><br />
-            <span>好きな声優は、巽悠衣子である。</span><br />
-            <span>「さくら荘のペットな彼女」を読み、プログラマーになることを決意。</span><br />
-            <span>Live2Dに憧れ、Live2Dライクなオープンソースソフトウェアを専門学校２年生のときに開発。</span><br />
-            <span>Macには、ステッカー貼る勢。</span><br />
-            <span>将来、どういうことをしたいのかまだ定まっていない様子。</span>
+          <div class="box story">
+            <h2>yuki540ってどんな人？</h2>
+            <p>「さくら荘のペットな彼女」をプログラマになることを決意しました。<br />
+            憧れのエンジニアは、みゆっきさんで、好きな声優は多すぎてお答えできません。<br />
+            Web関連の技術が好きで、将来もWeb関連の企業で就職することを望んでいます。<br />
+            死んだ目で和歌山から2時間かけて、大阪へ向かっている人がいたら、それが私です。</p>
           </div>
         </section>
 
-        <!-- ***************************** Product ******************************* -->
-        <h2 class="title" id="product">Product</h2>
-        <p class="description">yuki540が製作したものを公開。</p>
-
+				<div class="title" id="product">
+					<div class="large">作</div>
+					<div class="more">ってきたもの</div>
+					<div class="small">2._Product</div>
+				</div>
         <section class="product">
           <a class="product-li"
             href="https://github.com/yuki540net/satella.io">
@@ -165,10 +204,10 @@
             href="https://github.com/yuki540net/shuvi-lib">
             <img src="images/product/shuvi-lib.jpg" alt="shuvi-lib" />
             <h3>shuvi-lib</h3>
-            <h5>YouTube IFrame Player APIをゆるふわにラッピングしたライブラリ</h5>
+            <h5>YouTube_IFram_Player_APIをゆるふわにラッピングしたライブラリ</h5>
             <p class="desc">
-              shuvi-libは、YouTube IFrame Player APIをゆるふわにラッピングしたライブラリです。<br />
-              shuvi-libを使えば、YouTube IFrame Player APIをより簡単に操作することが可能です。<br />
+              shuvi-libは、YouTube_IFrame_Player_APIをゆるふわにラッピングしたライブラリです。<br />
+              shuvi-libを使えば、YouTube_IFrame_Player_APIをより簡単に操作することが可能です。<br />
               ソースコードはGitHub上で公開。
             </p>
             <span>Library</span><span>npm</span><span>CoffeeScript</span>
@@ -321,86 +360,105 @@
           </a>
         </section>
 
-        <!-- ***************************** Activity ****************************** -->
-        <h2 class="title" id="activity">Activity</h2>
-        <p class="description">私の活動や成果を公開。</p>
-
-        <section class="product">
-					<a class="product-li"
+				<div class="title" id="activity">
+					<div class="large">今</div>
+					<div class="more">までの成果を公開</div>
+					<div class="small">3._Activity</div>
+				</div>
+        <section class="activity">
+          <a class="activity-li" target="_blank" 
             href="https://twitter.com/eriri_jp/status/877135850781384704">
             <img src="images/activity/pixiv-xss.png" alt="pixiv" />
-            <h3>Pixivの脆弱性を報告し、5000円ゲット</h3>
-            <p class="desc">
-              BugBounty.jpでPixivが脆弱性報告対象だったので、チョロっと探してみたら、Reflected XSSがあったため報告。
-							報酬として、5ポイントと5000円をいただきました。
-            </p>
-            <span>xss</span><span>セキュリティ</span>
+            <h3>Pixivの脆弱性を報告し、5000円＆5ptsの獲得</h3>
             <p class="datetime">2017/06/20</p>
           </a>
 
-          <a class="product-li"
+          <a class="activity-li" target="_blank" 
             href="http://qiita.com/yuki540/items/13c6adc831a386445a3e">
             <img src="images/activity/chrome-security.png" alt="security" />
             <h3>Chrome拡張を用いたTwitterアカウントの奪取</h3>
-            <p class="desc">
-              Chrome拡張のマルウェアの話題が上がったので、Chrome拡張の危険性を試してみた。<br />
-              題材は、Chrome拡張を用いたTwitterアカウントの奪取。
-            </p>
-            <span>セキュリティ</span><span>Chrome拡張</span>
             <p class="datetime">2017/04/08</p>
           </a>
           
-          <a class="product-li"
+          <a class="activity-li" target="_blank" 
             href="http://niconare.nicovideo.jp/watch/kn2342">
             <img src="images/activity/live2d_like.png" alt="satella.io" />
             <h3>Live2Dライクなオープンソースソフトウェアの開発</h3>
-            <p class="desc">
-              在学中の専門学校での作品発表会。<br />
-              学科代表（IT学科）で「Live2Dライクなオープンソースソフトウェアの開発」という内容で登壇。<br />
-              発表に使ったスライドは、ニコナレにて公開。
-            </p>
-            <span>プレゼン</span><span>ニコナレ</span><span>Live2D</span>
             <p class="datetime">2017/02/26</p>
           </a>
 
-          <a class="product-li"
+          <a class="activity-li" target="_blank" 
             href="https://twitter.com/eriri_jp/status/794745927856635904">
             <img src="images/activity/calil.png" alt="calil" />
             <h3>日本最大の図書館検索サイト カーリルの脆弱性報告</h3>
-            <p class="desc">
-              日本最大の図書館検索サイト「カーリル」の脆弱性を報告。<br />
-              お礼の品として、「カーリル」オリジナルのマグカップとコーヒーパックをもらう。
-            </p>
-            <span>XSS</span><span>セキュリティ</span>
             <p class="datetime">2017/02/26</p>
           </a>
         </section>
 
-        <!-- ***************************** News ********************************** -->
-        <h2 class="title" id="news">News</h2>
-        <p class="description">ちょっとした出来事をお知らせ。</p>
-
-        <section class="news">
-          <p>暑くなってきたので、北海道バニラを毎日食べてます。</p>
-          <p>髪切りました。</p>
-          <p>Galaxy_S7_Edgeを購入。</p>
-          <p>新型MacBook_Proを購入(タッチバーなし)。</p>
-          <p>satella.ioをオープンソースとして公開。</p>
+				<div class="title" id="work">
+					<div class="large">今</div>
+					<div class="more">までとこれからの活動</div>
+					<div class="small">4._Work</div>
+				</div>
+        <section class="work">
+          <div class="box">
+            <div class="date">2017/9/14 〜 2017/9/19</div>
+            <div class="text">[予定]CyberAgent KyotoHack</div>
+          </div>
+          <div class="box">
+            <div class="date">2017/9/4 〜 2017/9/6</div>
+            <div class="text">[予定]チームラボ 3Dayインターン</div>
+          </div>
+          <div class="box">
+            <div class="date">2017/7/10 〜 2017/7/14</div>
+            <div class="text">[予定]面白法人カヤック インターン</div>
+          </div>
         </section>
 
-        <!-- ***************************** Contact ******************************* -->
-        <h2 class="title" id="contact">Contact</h2>
-        <p class="description">気軽にお声掛け下さい。</p>
-
-        <section class="contact">
-          <a href="https://twitter.com/eriri_jp" class="icon twitter"></a>
-          <a href="https://github.com/yuki540net" class="icon github"></a>
-          <a href="http://qiita.com/yuki540" class="icon qiita"></a>
+				<div class="title" id="use">
+					<div class="large">使</div>
+					<div class="more">用しているサービス</div>
+					<div class="small">5._Use</div>
+				</div>
+        <section class="use">
+          <a href="https://github.com/yuki540net" target="_blank" class="box">
+            <div class="icon github"></div>
+            <div class="name">GitHub</div>
+          </a>
+          <a href="https://twitter.com/eriri_jp?lang=ja" target="_blank" class="box">
+            <div class="icon twitter"></div>
+            <div class="name">Twitter</div>
+          </a>
+          <a href="http://qiita.com/yuki540" target="_blank" class="box">
+            <div class="icon qiita"></div>
+            <div class="name">Qiita</div>
+          </a>
+          <a href="http://yuki540.hatenablog.jp/" target="_blank" class="box">
+            <div class="icon hatena"></div>
+            <div class="name">Hatena</div>
+          </a>
+          <a href="https://www.youtube.com/channel/UCcrjkTnjMxXf7wnynsmWMzA" target="_blank" class="box">
+            <div class="icon youtube"></div>
+            <div class="name">YouTube</div>
+          </a>
+          <a href="http://www.nicovideo.jp/user/25832964" target="_blank" class="box">
+            <div class="icon niconico"></div>
+            <div class="name">niconico</div>
+          </a>
+          <a href="https://bugbounty.jp/users/9Kh2Pu21v1m2EP3DmJX48SJj" target="_blank" class="box">
+            <div class="icon bug"></div>
+            <div class="name">BugBounty</div>
+          </a>
         </section>
 
       </article>
       <footer id="footer">
-        <p>Copyright 2017 yuki540 Some rights reserved.</p>
+        <div class="inner">
+          <div class="text"></div>
+          <img src="./images/footer/char.png" />
+          <div class="copyright">Copyright 2017 yuki540 Some rights reserved.</div>
+        </div>
+        <div class="mask"></div>
       </footer>
     </main>
     <script>
