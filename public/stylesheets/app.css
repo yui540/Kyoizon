@@ -1,0 +1,138 @@
+#application {
+	
+}
+
+/**
+ * title-bar
+ */
+#title-bar {
+	position: absolute;
+	z-index: 5;
+}
+#title-bar:after { content: ""; display: block; clear: both; }
+
+/*** logo ***/
+#title-bar .logo {
+	float: left;
+	width: 313px;
+	height: 100px;
+	margin: 10px;
+	background-size: 100%;
+	background-position: center;
+}
+
+/*** sns box ***/
+#title-bar .sns-box {
+	float: right;
+	margin-top: 30px;
+}
+#title-bar .sns-box:after { content: ""; display: block; clear: both; }
+#title-bar .sns-box .sns {
+	float: left;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	margin-right: 40px;
+	border-radius: 50%;
+	transition: all 0.35s ease 0s;
+}
+.sns .line1,
+.sns .line2,
+.sns .line3,
+.sns .line4 {
+	position: absolute;
+	background-color: #fff;
+}
+.sns:hover {
+	box-shadow: 0 0 30px #ccc;
+	background-color: rgba(255,255,255,0.3);
+}
+.sns .line1 {
+	top: 0;
+	left: 20px;
+	width: 50px;
+	height: 0.5px;
+	transition: all 0.35s ease 0s;
+}
+.sns:hover .line1 { width: 10px; left: 25px; }
+.sns .line3 {
+	bottom: 0.5px;
+	left: -10px;
+	width: 50px;
+	height: 0.5px;
+	transition: all 0.35s ease 0s;
+}
+.sns:hover .line3 { width: 10px; left: 25px; }
+.sns .line2 {
+	top: 20px;
+	left: 0;
+	width: 0.5px;
+	height: 50px;
+	transition: all 0.35s ease 0s;
+}
+.sns:hover .line2 { height: 10px; top: 25px; }
+.sns .line4 {
+	top: -10px;
+	right: 0.5px;
+	width: 0.5px;
+	height: 50px;
+	transition: all 0.35s ease 0s;
+}
+.sns:hover .line4 { height: 10px; top: 25px; }
+
+/**
+ * content-box
+ */
+#content-box,
+#content-box .main-visual {
+	position: absolute;
+	overflow: hidden;
+}
+
+/*** main-visual ***/
+.main-visual .bg,
+.main-visual .mask {
+	position: absolute;
+}
+
+.main-visual .bg {
+	background-size: cover;
+	background-position: center;
+	opacity: 0.7;
+}
+
+.main-visual .character {
+	position: absolute;
+	background-size: 100%;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+.main-visual .clock {
+	position: absolute;
+	background-image: url(../images/main-visual/time1.png);
+	background-color: rgba(89,79,121,0.3);
+	background-size: 100%;
+	border-radius: 50%;
+}
+.main-visual .clock .second-hand-1,
+.main-visual .clock .second-hand-2,
+.main-visual .clock .second-hand-3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+.main-visual .clock .second-hand-1 { background-image: url(../images/main-visual/time2.png); }
+.main-visual .clock .second-hand-2 { background-image: url(../images/main-visual/time3.png); }
+.main-visual .clock .second-hand-3 { background-image: url(../images/main-visual/time4.png); }
+
+.main-visual .mask {
+	box-shadow: 0 0 1000px #111 inset;
+}
+
+
