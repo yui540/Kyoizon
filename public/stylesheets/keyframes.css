@@ -1,46 +1,32 @@
 /**
- *
- * @author yuki540
- * keyframes.css
- *
+ * 横にスライドしながら、表示・非表示
  */
-@keyframes slide_down {
-	0% {
-		top: -100%;
-	}
-	100% {
-		top: 0%;
-	}
+@keyframes close_slide {
+	0%   { width: 100%; }
+	100% { width: 0; }
 }
-@-webkit-keyframes slide_down {
-	0% {
-		top: -100%;
-	}
-	100% {
-		top: 0%;
-	}
+@keyframes open_slide {
+	0%   { width: 0; }
+	100% { width: 100%; }
 }
 
-@keyframes slide_up {
-	0% {
-		top: 0%;
-	}
-	100% {
-		top: -100%;
-	}
+/**
+ * 縦にスライドしながら、表示・非表示
+ */
+@keyframes close_down {
+	0%   { height: 100%; }
+	100% { height: 0; }
 }
-@-webkit-keyframes slide_up {
-	0% {
-		top: 0%;
-	}
-	100% {
-		top: -100%;
-	}
+@keyframes open_up {
+	0%   { height: 0; }
+	100% { height: 100%; }
 }
 
-
-
-
-
-
-
+/**
+ * 点滅
+ */
+@keyframes hotaru {
+	0%   { opacity: 0.1; }
+	50%  { opacity: 1.0; }
+	100% { opacity: 0.1; }
+}

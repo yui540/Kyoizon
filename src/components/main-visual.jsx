@@ -4,7 +4,9 @@ import React from 'react'
 import Bg        from './bg.jsx'
 import Character from '../containers/character'
 import Clock     from '../containers/clock'
+import Canvas    from '../containers/canvas'
 import Mask      from './mask.jsx'
+import NavBox    from '../containers/nav-box'
 
 export default class MainVisual extends React.Component {
 	constructor(props) {
@@ -26,17 +28,14 @@ export default class MainVisual extends React.Component {
 					height={ this.props.height }
 					url="./images/main-visual/bg.jpg"
 				/>
-				<Character
-				url="./images/main-visual/satella.png"
-				/>
-				<Clock 
-					width={ this.props.width }
-					height={ this.props.height }
-				/>
+				<Character url="./images/main-visual/satella.png" />
+				<Canvas />
+				<Clock />
 				<Mask
 					width={ this.props.width }
 					height={ this.props.height }
 				/>
+				<NavBox />
 			</div>
 		)
 	}

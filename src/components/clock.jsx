@@ -20,7 +20,7 @@ export default class Clock extends React.Component {
 				width: `${ this.props.size }px`,
 				height: `${ this.props.size }px`,
 				left: `${ this.props.x }px`,
-				bottom: `${ this.props.y }px`
+				top: `${ this.props.y }px`
 			},	
 			secondHand3: { transform: `rotate(${ seconds }deg)` },
 			secondHand2: { transform: `rotate(${ hours }deg)` },

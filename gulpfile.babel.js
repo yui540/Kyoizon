@@ -23,7 +23,8 @@ gulp.task('js', () => {
 gulp.task('watch', () => {
 	gulp.watch([
 		`${ SRC }/**/*.js`,
-		`${ SRC }/**/*.jsx`
+		`${ SRC }/**/*.jsx`,
+		`${ SRC }/**/*.json`
 	], ['js'])
 })
 

@@ -3,6 +3,7 @@ import React from 'react'
 // compoents
 import TitleBar   from './title-bar.jsx'
 import ContentBox from './content-box.jsx'
+import OverView   from '../containers/over-view'
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -26,6 +27,7 @@ export default class App extends React.Component {
 					width={ this.props.width }
 					height={ this.props.height }
 				/>
+				<OverView />
 			</div>
 		)
 	}

@@ -1,5 +1,173 @@
-#application {
-	
+#application {}
+
+/**
+ * over-view
+ */
+#over-view {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	z-index: 100;
+}
+#over-view[data-mode="init"] { animation: close_slide 0.7s ease 1.4s forwards; }
+#over-view[data-mode="profile"],
+#over-view[data-mode="product"],
+#over-view[data-mode="activity"],
+#over-view[data-mode="schedule"] { 
+	animation: open_up 0.7s ease 0s forwards; 
+}
+#over-view[data-mode="profile-close"],
+#over-view[data-mode="product-close"],
+#over-view[data-mode="activity-close"],
+#over-view[data-mode="schedule-close"] {
+	animation: close_down 0.7s ease 0.7s forwards;	
+}
+
+/*** story ***/
+.story {
+	position: absolute;	
+	top: 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+.story .satella {
+	position: absolute;
+	top: 0;
+}
+.story .satella .item {
+	position: absolute;
+	background-image: url(../images/main-visual/_satella.png);
+	background-size: 100%;
+}
+.story .satella .text {
+	position: absolute;
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+}
+.story[data-mode="init"]     .satella .text { background-image: url(../images/main-visual/init.png); }
+.story[data-mode="profile"]  .satella .text { background-image: url(../images/main-visual/profile.png); }
+.story[data-mode="product"]  .satella .text { background-image: url(../images/main-visual/product.png); }
+.story[data-mode="activity"] .satella .text { background-image: url(../images/main-visual/activity.png); }
+.story[data-mode="schedule"] .satella .text { background-image: url(../images/main-visual/schedule.png); }
+
+.story[data-mode="profile-close"] .satella .text { 
+	background-image: url(../images/main-visual/profile-close.png); 
+}
+.story[data-mode="product-close"] .satella .text { 
+	background-image: url(../images/main-visual/product-close.png); 
+}
+.story[data-mode="activity-close"] .satella .text { 
+	background-image: url(../images/main-visual/activity-close.png); 
+}
+.story[data-mode="schedule-close"] .satella .text { 
+	background-image: url(../images/main-visual/schedule-close.png); 
+}
+
+
+
+/*** page ***/
+.page {
+	position: absolute;
+	top: 0;
+	background-color: #342F49;
+	overflow: hidden;
+}
+.page[data-mode="profile"],
+.page[data-mode="product"],
+.page[data-mode="activity"],
+.page[data-mode="schedule"] {
+	animation: open_up 0.7s ease 0.7s forwards;
+}
+.page[data-mode="profile-close"],
+.page[data-mode="product-close"], 
+.page[data-mode="activity-close"],
+.page[data-mode="schedule-close"] {
+	animation: close_down 0.7s ease 0s forwards;
+}
+.page .close-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+.page .close-btn:after,
+.page .close-btn:before {
+	position: absolute;
+	top: 49.5px;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+}
+.page .close-btn:after { transform: rotate(45deg); }
+.page .close-btn:before { transform: rotate(-45deg); }
+
+.page .page-li {
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 10px 0;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.page .title {
+	position: relative;
+	width: 820px;
+	height: 70px;
+	margin: 0 auto;
+}
+.page .title .large {
+	position: absolute;
+	top: 0; left: 0;
+	width: 70px; height: 70px;
+	background-color: #999;
+	font-size: 55px;
+	text-align: center;
+	line-height: 70px;
+	color: #fff;
+}
+.page .title .sub-title {
+	position: absolute;
+	top: 0; left: 71px;
+	width: 100px; height: 20px;
+	background-color: #4c4c4c;
+	font-size: 12px;
+	color: #fff;
+	line-height: 20px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.page .title .small {
+	position: absolute;
+	bottom: 0; left: 70px;
+	width: 750px; height: 50px;
+	border-bottom: solid 1px #999;
+	box-sizing: border-box;
+	font-size: 28px;
+	color: #666;
+	line-height: 50px;
+}
+
+/*** loading ***/
+.loading {
+	position: absolute;
+	top: 0;
+	background-color: #342F49;
+	overflow: hidden;
+}
+.loading[data-mode="close"] { animation: close_slide 0.7s ease 0.7s forwards; }
+.loading .text {
+	position: absolute;
+	top: 0;
+	font-size: 50px;
+	text-align: center;
+	color: #fff;
+	animation: hotaru 3s ease 0s infinite;
 }
 
 /**
@@ -39,6 +207,7 @@
 	margin-right: 40px;
 	border-radius: 50%;
 	transition: all 0.35s ease 0s;
+	cursor: pointer;
 }
 .sns .line1,
 .sns .line2,
@@ -112,6 +281,11 @@
 	background-repeat: no-repeat;
 }
 
+.main-visual .canvas {
+	position: absolute;
+	top: 0;
+}
+
 .main-visual .clock {
 	position: absolute;
 	background-image: url(../images/main-visual/time1.png);
@@ -119,20 +293,74 @@
 	background-size: 100%;
 	border-radius: 50%;
 }
-.main-visual .clock .second-hand-1,
-.main-visual .clock .second-hand-2,
-.main-visual .clock .second-hand-3 {
+.main-visual .second-hand-1,
+.main-visual .second-hand-2,
+.main-visual .second-hand-3 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-size: 100%;
+	transition: all 1s ease 0s;
 }
-.main-visual .clock .second-hand-1 { background-image: url(../images/main-visual/time2.png); }
-.main-visual .clock .second-hand-2 { background-image: url(../images/main-visual/time3.png); }
-.main-visual .clock .second-hand-3 { background-image: url(../images/main-visual/time4.png); }
+.main-visual .second-hand-1 { background-image: url(../images/main-visual/time2.png); }
+.main-visual .second-hand-2 { background-image: url(../images/main-visual/time3.png); }
+.main-visual .second-hand-3 { background-image: url(../images/main-visual/time4.png); }
 
 .main-visual .mask {
 	box-shadow: 0 0 1000px #111 inset;
 }
 
+.main-visual .nav {
+	position: absolute;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 50%;
+	transition: all 0.5s ease 0s;
+	cursor: pointer;
+	overflow: hidden;
+	background-size: 100%;
+	background-image: url(../images/main-visual/time1.png);
+}
+.main-visual .nav:hover {
+	box-shadow: 0 0 80px rgba(255,255,255,0.5);
+}
+.main-visual .nav:hover .second-hand-1 { transform: rotate(-720deg); }
+.main-visual .nav:hover .second-hand-3 { transform: rotate(-1080deg); }
+.main-visual .nav:hover .second-hand-2 { transform: rotate(-360deg); }
+.main-visual .nav .text {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
+@keyframes scale11 {
+	0%   { transform: scale(1.0); }
+	50%  { transform: scale(1.05); }
+	100% { transform: scale(1.0); }
+}
+@keyframes scale12 {
+	0%   { transform: scale(1.05); }
+	30%  { transform: scale(1.0); }
+	100% { transform: scale(1.05); }
+}
+
+#nav-0 { animation: scale11 3s ease 0s infinite; }
+#nav-1 { animation: scale12 3s ease 0s infinite; }
+#nav-2 { animation: scale12 4s ease 0s infinite; }
+#nav-3 { animation: scale11 4s ease 0s infinite; }
+#nav-0 .text {
+	background-image: url(../images/main-visual/profile-label.png);
+}
+#nav-1 .text {
+	background-image: url(../images/main-visual/activity-label.png);
+}
+#nav-2 .text {
+	background-image: url(../images/main-visual/product-label.png);
+}
+#nav-3 .text {
+	background-image: url(../images/main-visual/schedule-label.png);
+}
