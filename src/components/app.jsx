@@ -15,10 +15,11 @@ export default class App extends React.Component {
 	 */
 	render() {
 		return (
-			<div id="application" style={{ 
-				width: `${ this.props.width }px`,
-				height: `${ this.props.height }px`
-			}}>
+			<div id="application" 
+        style={{ 
+				  width: `${ this.props.width }px`,
+				  height: `${ this.props.height }px`
+			  }}>
 				<TitleBar 
 					width={ this.props.width }
 					height={ this.props.height }

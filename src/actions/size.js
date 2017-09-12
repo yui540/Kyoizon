@@ -8,3 +8,13 @@ export const changeSize = (width, height) => {
 		height
 	}
 }
+
+export const changeSizeSp = (width, height) => {
+  if(width < 320) width = 320
+
+  return {
+    type: 'CHANGE_SIZE_SP',
+    width,
+    height
+  }
+}

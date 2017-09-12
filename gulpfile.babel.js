@@ -6,10 +6,12 @@ import browserify from 'browserify'
 import babelify   from 'babelify'
 import source     from 'vinyl-source-stream'
 
-const SRC         = './src'
-,     DEST        = './public/js'
-,     SCRIPT_NAME = 'core.js'
-,     BUNDLE_NAME = 'core.min.js'
+const SRC            = './src'
+,     DEST           = './public/js'
+,     SCRIPT_NAME    = 'core.js'
+,     BUNDLE_NAME    = 'core.min.js'
+,     SCRIPT_NAME_SP = 'sp.js'
+,     BUNDLE_NAME_SP = 'sp.min.js'
 
 gulp.task('js', () => {
 	browserify(`${ SRC }/${ SCRIPT_NAME }`, { debug: true })
@@ -18,6 +20,14 @@ gulp.task('js', () => {
 		.on('error', gutil.log.bind(gutil, 'Browserify Error'))
 		.pipe(source(BUNDLE_NAME))
 		.pipe(gulp.dest(DEST))
+    
+  browserify(`${ SRC }/${ SCRIPT_NAME_SP }`, { debug: true })
+		.transform(babelify)
+		.bundle()
+		.on('error', gutil.log.bind(gutil, 'Browserify Error'))
+		.pipe(source(BUNDLE_NAME_SP))
+		.pipe(gulp.dest(DEST))
+
 })
 
 gulp.task('watch', () => {

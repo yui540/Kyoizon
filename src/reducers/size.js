@@ -4,7 +4,8 @@ const char_base_w = 800
 ,     clock_y     = 50
 
 export default (state={}, action) => {
-	const per = (action.height - 120) / char_base_h
+	const per  = (action.height - 120) / char_base_h
+  ,     _per = (action.height - 100) / char_base_h
 
 	switch(action.type) {
 		case 'CHANGE_SIZE':
@@ -18,6 +19,18 @@ export default (state={}, action) => {
 				clock_x    : (action.width / 2) - ((clock_base * per) / 2),
 				clock_y    : action.height - ((clock_base * per) - (clock_y * per)),
 				nav        : getNavPos(action, per)
+			}
+
+    case 'CHANGE_SIZE_SP':
+      return { 
+				width      : action.width, 
+				height     : action.height,
+				char_w     : char_base_w * _per,
+				char_h     : char_base_h * _per,
+				char_x     : (action.width - (char_base_w * _per)) / 2,
+				clock_size : clock_base * _per,
+				clock_x    : (action.width / 2) - ((clock_base * _per) / 2),
+				clock_y    : action.height - ((clock_base * _per) - (clock_y * _per))
 			}
 		default:
 			return state

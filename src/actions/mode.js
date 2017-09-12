@@ -11,3 +11,10 @@ export const changeLoadingMode = (mode) => {
 		mode
 	}
 }
+
+export const changeMenuMode = (mode) => {
+	return {
+		type : 'CHANGE_MENU_MODE',
+		mode
+	}
+}

@@ -8,6 +8,10 @@ export default (state={}, action) => {
 			return Object.assign({}, state, { 
 				loading: action.mode 
 			})
+    case 'CHANGE_MENU_MODE':
+      return Object.assign({}, state, {
+        menu: action.mode
+      })
 		default:
 			return state
 	}
