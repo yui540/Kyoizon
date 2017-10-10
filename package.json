@@ -1,25 +1,30 @@
 {
-  "name": "yuki540.com",
-  "version": "1.0.0",
-  "description": "http://yuki540.com",
+  "name": "yuki540-starter-kit",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.babel.js",
+  "engines": {
+    "node": ">=5.0.0"
+  },
   "scripts": {
-    "build": "$(npm bin)/gulp build",
+    "build": "$(npm bin)/gulp",
     "watch": "$(npm bin)/gulp watch"
   },
-  "repository": "https://github.com/yuki540net/yuki540.com.git",
-  "author": "yuki540 <apple.yamamoto@ezweb.ne.jp>",
+  "keywords": [
+    "yuki540"
+  ],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "gulp": "^3.9.1",
-    "gulp-util": "^3.0.8",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gutil": "^1.6.4",
+    "jquery": "^3.2.1",
+    "react": "^15.6.2",
     "vinyl-source-stream": "^1.1.0"
   }
 }
