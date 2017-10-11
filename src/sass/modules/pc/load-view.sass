@@ -46,7 +46,23 @@
         animation: load_animate_1 1.5s ease 0s infinite
       .load-icon:before
         animation: load_animate_2 1.5s ease 0s infinite
+
+      .logo
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -125px
+        margin-top: -125px
+        width: 250px
+        height: 250px
+        background-color: rgba(255,255,255,0.3)
+        background-image: url(../images/kawaii.png)
+        background-size: 100%
+        background-position: center
+        background-repeat: no-repeat
     
+    .load-view-mask
+      background-color: rgba(0,0,0,0.1)
     .load-view-0
       background-color: #fff
     .load-view-1 div
@@ -60,6 +76,8 @@
 
   
   #load-view[data-state="true"]
+    animation: slide_close 1s ease 2.5s forwards
+
     .load-view-0
       animation: slide_close 1s ease 0s forwards
     .load-view-1
