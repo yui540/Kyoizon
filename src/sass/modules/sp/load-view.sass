@@ -17,36 +17,25 @@
         background-size: cover
         background-position: center
         background-repeat: no-repeat
-
-      .load-icon
+      
+      .progress-bar
         position: absolute
         top: 50%
-        left: 50%
-        margin-left: -150px
-        margin-top: -150px
-        width: 300px
-        height: 300px
-        font-size: 30px
-        text-align: center
-        line-height: 300px
-        animation: opacity 1.5s ease 0s infinite
-      .load-icon:after,
-      .load-icon:before
-        position: absolute
-        top: 100px
-        left: 100px
-        content: ""
-        display: block
-        width: 100px
-        height: 100px
-        border-radius: 50%
-        border: solid 1px #666
-        box-sizing: border-box
-      .load-icon:after
-        animation: load_animate_1 1.5s ease 0s infinite
-      .load-icon:before
-        animation: load_animate_2 1.5s ease 0s infinite
-    
+        left: 0
+        margin-top: -2.5px
+        width: 100%
+        height: 5px
+        background-color: #eee
+
+        .bar
+          position: absolute
+          top: 0
+          left: 0
+          width: 0%
+          height: 5px
+          background-color: #619EC8
+          transition: all 0.5s ease 0s
+
       .logo
         position: absolute
         top: 50%

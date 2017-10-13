@@ -10,9 +10,10 @@ const menu_btn   = document.querySelector('.sp-menu')
 
 resize()
 util.preload(json, () => {
-  loadFinish()
+  setTimeout(() => { loadFinish() }, 00)
 }, (data) => {
-  console.log(data)
+  const per = data.progress * 100
+  document.querySelector('.bar').style.width = `${ per }%`
 })
 
 /* resize -------------------------------------------------------------------- */
