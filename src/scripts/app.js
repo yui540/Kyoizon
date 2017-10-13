@@ -4,6 +4,10 @@ import preload_json from './config/preload.json'
 const device = util.isPC() ? 'pc' : 'sp'
 ,     json   = preload_json[device]
 
+const menu_btn   = document.querySelector('.sp-menu')
+,     close_btn  = document.querySelector('.close')
+,     global_nav = document.querySelector('.global-nav')
+
 resize()
 util.preload(json, () => {
   loadFinish()
@@ -13,6 +17,18 @@ util.preload(json, () => {
 window.addEventListener('resize', () => {
   resize()
 })
+
+/* sp menu show -------------------------------------------------------------- */
+menu_btn.addEventListener('click', () => {
+  global_nav.setAttribute('data-state', true)
+  close_btn.setAttribute('data-state', true)
+}, false)
+
+/* sp menu hidden ------------------------------------------------------------ */
+close_btn.addEventListener('click', () => {
+  global_nav.setAttribute('data-state', false)
+  close_btn.setAttribute('data-state', false)
+}, false)
 
 /**
  * 各パーツのリサイズ
