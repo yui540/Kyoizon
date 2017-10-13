@@ -2,7 +2,7 @@ import * as util    from './lib/util'
 import preload_json from './config/preload.json'
 
 const device = util.isPC() ? 'pc' : 'sp'
-,     json   = preload_json[device]
+,     json   = preload_json[device].concat(preload_json['common'])
 
 const menu_btn   = document.querySelector('.sp-menu')
 ,     close_btn  = document.querySelector('.close')
@@ -11,6 +11,8 @@ const menu_btn   = document.querySelector('.sp-menu')
 resize()
 util.preload(json, () => {
   loadFinish()
+}, (data) => {
+  console.log(data)
 })
 
 /* resize -------------------------------------------------------------------- */

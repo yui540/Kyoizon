@@ -12,5 +12,9 @@
     "./images/main-visual/sp_3.jpg",
     "./images/main-visual/sp_4.jpg",
     "./images/main-visual/sp-main-visual.jpg"
+  ],
+  "common": [
+    "./images/_logo.png",
+    "./images/tenshi.png"
   ]
 }
