@@ -14,6 +14,9 @@ window.addEventListener('resize', () => {
   resize()
 })
 
+/**
+ * 各パーツのリサイズ
+ */
 function resize() {
   resizeLoadView()
   resizeMainVisual()
@@ -24,11 +27,10 @@ function resize() {
  */
 function resizeMainVisual() {
   const main_visual = document.querySelector('.main-visual')
-  ,     width       = document.body.offsetWidth < 1100 ? 1100 : document.body.offsetWidth
-  ,     height      = window.innerHeight < 650 ? 650 : window.innerHeight
-  
-  main_visual.style.width  = `${ width }px`
-  main_visual.style.height = `${ height }px`
+  ,     size        = getSize()
+
+  main_visual.style.width  = `${ size.width }px`
+  main_visual.style.height = `${ size.height }px`
 }
 
 /**
@@ -36,13 +38,11 @@ function resizeMainVisual() {
  */
 function resizeLoadView() {  
   const load_view = document.querySelectorAll('.load-view div')
-  ,     width     = document.body.offsetWidth < 1100 ? 1100 : document.body.offsetWidth
-  ,     height    = window.innerHeight < 650 ? 650 : window.innerHeight
-  
+  ,     size      = getSize()
 
   for(let i=0; i < load_view.length; i++) {
-    load_view[i].style.width  = `${ width }px`
-    load_view[i].style.height = `${ height }px`
+    load_view[i].style.width  = `${ size.width }px`
+    load_view[i].style.height = `${ size.height }px`
   }
 }
 
@@ -52,4 +52,17 @@ function resizeLoadView() {
 function loadFinish() {
   document.getElementById('load-view').setAttribute('data-state', 'true')
   document.getElementById('header').setAttribute('data-state', 'true')
+}
+
+/**
+ * 画面サイズの取得
+ * @return size { width, height }
+ */
+function getSize() {
+  let width  = document.body.offsetWidth
+  ,   height = window.innerHeight
+  if(util.isPC() && width < 1100) width  = 1100
+  if(util.isPC() && height < 650) height = 650
+
+  return { width, height }
 }
