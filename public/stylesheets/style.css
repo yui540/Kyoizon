@@ -118,6 +118,22 @@
   100% {
     margin-left: 0; } }
 
+@keyframes sns_sp {
+  0% {
+    margin-top: 60px; }
+  100% {
+    margin-top: 0; } }
+
+@keyframes sp_menu {
+  0% {
+    opacity: 0;
+    border-radius: 50%;
+    transform: scale(0.2); }
+  100% {
+    opacity: 1;
+    border-radius: 0;
+    transform: scale(1); } }
+
 @keyframes scroll_icon {
   0% {
     top: 7px;
@@ -128,6 +144,14 @@
   100% {
     top: 27px; } }
 
+@keyframes scroll_icon_sp {
+  0% {
+    opacity: 0;
+    top: 10px; }
+  100% {
+    opacity: 1;
+    top: 50px; } }
+
 @keyframes bg {
   0% {
     transform: scale(1); }
@@ -135,6 +159,36 @@
     transform: scale(1.05); }
   100% {
     transform: scale(1); } }
+
+@keyframes global_nav_show {
+  0% {
+    left: 100%; }
+  100% {
+    left: 200px; } }
+
+@keyframes global_nav_hidden {
+  0% {
+    left: 200px; }
+  100% {
+    left: 100%; } }
+
+@keyframes global_nav_label {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes close_show {
+  0% {
+    left: -200px; }
+  100% {
+    left: 0; } }
+
+@keyframes close_btn_show {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 html, body {
   margin: 0;
@@ -308,7 +362,8 @@ iframe {
         height: 30px;
         display: block;
         overflow: hidden;
-        margin-right: 10px; }
+        margin-right: 10px;
+        transition: all 0.35s ease 0s; }
         #header .main-visual .sns-box .sns-li .fa {
           width: 80px;
           height: 30px;
@@ -318,6 +373,9 @@ iframe {
           line-height: 30px;
           margin-left: -80px;
           background-color: rgba(0, 0, 0, 0.3); }
+      #header .main-visual .sns-box .sns-li:hover {
+        background-color: #111;
+        border-radius: 5px; }
     #header .main-visual .sns-box:after {
       content: "";
       display: block;
@@ -434,7 +492,7 @@ iframe {
         width: 250px;
         height: 250px;
         background-color: rgba(255, 255, 255, 0.3);
-        background-image: url(../images/kawaii.png);
+        background-image: url(../images/tenshi.png);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat; }
@@ -466,7 +524,8 @@ iframe {
 @media (max-width: 750px) {
   #header .main-visual {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0; }
     #header .main-visual .bg {
       position: absolute;
       width: 100%;
@@ -474,8 +533,7 @@ iframe {
       top: 0;
       background-image: url(../images/main-visual/sp-main-visual.jpg);
       background-size: cover;
-      background-position: center top;
-      opacity: 0; }
+      background-position: center top; }
     #header .main-visual .overray {
       position: absolute;
       width: 100%;
@@ -526,20 +584,202 @@ iframe {
       #header .main-visual .logo .line:nth-child(4) {
         right: 0;
         top: 100%; }
-  #header[data-state="true"] .main-visual .bg {
+  #header .sns-box {
+    position: absolute;
+    width: 390px;
+    left: 180px;
+    bottom: 60px;
+    overflow: hidden; }
+    #header .sns-box .sns-li {
+      float: left;
+      display: block;
+      width: 180px;
+      height: 60px;
+      margin-right: 30px; }
+      #header .sns-box .sns-li .fa {
+        width: 100%;
+        height: 100%;
+        font-size: 50px;
+        color: #4c4c4c;
+        text-align: center;
+        line-height: 60px;
+        margin-top: 60px;
+        background-color: rgba(255, 255, 255, 0.8); }
+    #header .sns-box .sns-li:last-child {
+      margin-right: 0; }
+  #header .sns-box:after {
+    content: "";
+    display: block;
+    clear: both; }
+  #header .sp-menu {
+    position: absolute;
+    top: 29px;
+    right: 29px;
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    opacity: 0; }
+    #header .sp-menu .inner {
+      position: absolute;
+      top: 40px;
+      left: 35px;
+      width: 50px;
+      height: 40px; }
+      #header .sp-menu .inner .line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #4c4c4c; }
+      #header .sp-menu .inner .line:nth-child(1) {
+        top: 0; }
+      #header .sp-menu .inner .line:nth-child(2) {
+        top: 19.5px; }
+      #header .sp-menu .inner .line:nth-child(3) {
+        bottom: 0; }
+  #header .global-nav {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 550px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1; }
+    #header .global-nav .inner {
+      position: absolute;
+      top: 50%;
+      left: 75px;
+      margin-top: -250px;
+      width: 400px;
+      height: 500px; }
+    #header .global-nav .nav-li {
+      position: relative;
+      display: block;
+      width: 400px;
+      height: 80px;
+      margin-bottom: 60px;
+      font-size: 60px;
+      text-align: center;
+      line-height: 60px; }
+      #header .global-nav .nav-li .fa {
+        margin-right: 20px; }
+    #header .global-nav .nav-li:after {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 0;
+      height: 40px;
+      background-color: #444;
+      opacity: 0.2;
+      content: "";
+      display: block; }
+    #header .global-nav .nav-li:last-child {
+      margin-bottom: 0; }
+    #header .global-nav .nav-li:nth-child(1) {
+      color: #ed588d; }
+    #header .global-nav .nav-li:nth-child(1):after {
+      background-color: #ed588d; }
+    #header .global-nav .nav-li:nth-child(2) {
+      color: #86c351; }
+    #header .global-nav .nav-li:nth-child(2):after {
+      background-color: #86c351; }
+    #header .global-nav .nav-li:nth-child(3) {
+      color: #ff8100; }
+    #header .global-nav .nav-li:nth-child(3):after {
+      background-color: #ff8100; }
+    #header .global-nav .nav-li:nth-child(4) {
+      color: #00d1fb; }
+    #header .global-nav .nav-li:nth-child(4):after {
+      background-color: #00d1fb; }
+  #header .global-nav[data-state="true"] {
+    animation: global_nav_show 0.5s ease 0s forwards; }
+    #header .global-nav[data-state="true"] .nav-li:nth-child(1):after {
+      animation: global_nav_label 1.5s ease 0s forwards; }
+    #header .global-nav[data-state="true"] .nav-li:nth-child(2):after {
+      animation: global_nav_label 1.5s ease 0.1s forwards; }
+    #header .global-nav[data-state="true"] .nav-li:nth-child(3):after {
+      animation: global_nav_label 1.5s ease 0.2s forwards; }
+    #header .global-nav[data-state="true"] .nav-li:nth-child(4):after {
+      animation: global_nav_label 1.5s ease 0.3s forwards; }
+  #header .close {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; }
+    #header .close div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -50px;
+      width: 100px;
+      height: 100px; }
+    #header .close div:after,
+    #header .close div:before {
+      position: absolute;
+      top: 24px;
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #fff; }
+    #header .close div:after {
+      transform: rotate(45deg); }
+    #header .close div:before {
+      transform: rotate(-45deg); }
+  #header .close[data-state="true"] {
+    animation: close_show 0.5s ease 0s forwards; }
+    #header .close[data-state="true"] div:after {
+      animation: close_btn_show 0.75s ease 0.0s forwards; }
+    #header .close[data-state="true"] div:before {
+      animation: close_btn_show 0.75s ease 0.2s forwards; }
+  #header .scroll-icon {
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 100px;
+    border-radius: 40px;
+    border: solid 8px #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #777, 0 0 5px #777 inset; }
+    #header .scroll-icon div {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 5px #777;
+      animation: scroll_icon_sp 2s ease 0s infinite; }
+  #header[data-state="true"] .main-visual {
     animation: fadein 1s ease-out 2.3s forwards; }
-  #header[data-state="true"] .main-visual .overray {
-    animation: main_visual_animate_sp 1.4s ease-out 2.3s forwards; }
-  #header[data-state="true"] .main-visual .logo .icon {
-    animation: fadein 0.75s ease 3.4s forwards; }
-  #header[data-state="true"] .main-visual .logo .line:nth-child(1) {
-    animation: line1_sp 0.75s ease 3.4s forwards; }
-  #header[data-state="true"] .main-visual .logo .line:nth-child(2) {
-    animation: line2_sp 0.75s ease 3.4s forwards; }
-  #header[data-state="true"] .main-visual .logo .line:nth-child(3) {
-    animation: line3_sp 0.75s ease 3.4s forwards; }
-  #header[data-state="true"] .main-visual .logo .line:nth-child(4) {
-    animation: line4_sp 0.75s ease 3.4s forwards; } }
+    #header[data-state="true"] .main-visual .bg {
+      animation: bg 5s ease 0s infinite; }
+    #header[data-state="true"] .main-visual .overray {
+      animation: main_visual_animate_sp 1.4s ease-out 2.3s forwards; }
+    #header[data-state="true"] .main-visual .logo .icon {
+      animation: fadein 0.75s ease 3.4s forwards; }
+    #header[data-state="true"] .main-visual .logo .line:nth-child(1) {
+      animation: line1_sp 0.75s ease 3.4s forwards; }
+    #header[data-state="true"] .main-visual .logo .line:nth-child(2) {
+      animation: line2_sp 0.75s ease 3.4s forwards; }
+    #header[data-state="true"] .main-visual .logo .line:nth-child(3) {
+      animation: line3_sp 0.75s ease 3.4s forwards; }
+    #header[data-state="true"] .main-visual .logo .line:nth-child(4) {
+      animation: line4_sp 0.75s ease 3.4s forwards; }
+    #header[data-state="true"] .main-visual .sns-box .sns-li:nth-child(1) .fa {
+      animation: sns_sp 0.75s ease 3.4s forwards; }
+    #header[data-state="true"] .main-visual .sns-box .sns-li:nth-child(2) .fa {
+      animation: sns_sp 0.75s ease 3.5s forwards; }
+    #header[data-state="true"] .main-visual .sp-menu {
+      animation: sp_menu 0.75s ease 3.4s forwards; } }
 
 @media (max-width: 750px) {
   #load-view {
@@ -595,7 +835,7 @@ iframe {
         width: 300px;
         height: 300px;
         background-color: rgba(255, 255, 255, 0.3);
-        background-image: url(../images/_logo.png);
+        background-image: url(../images/tenshi.png);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat; }
