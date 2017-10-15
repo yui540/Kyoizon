@@ -1,0 +1,343 @@
+@include pc-layout
+  #content
+    width: 100%
+    min-width: 1100px
+
+    .area
+      padding: 60px 0
+      
+      .inner
+        width: 1100px
+        margin: 0 auto
+      .inner:after
+        content: ""
+        display: block
+        clear: both
+
+    .section-title
+      width: 100%
+      padding-top: 60px
+
+      .domain
+        font-size: 20px
+        color: #aaa
+        text-align: center
+      .title
+        font-size: 35px
+        text-align: center
+        color: #333
+        padding-bottom: 10px
+        margin-bottom: 10px
+        border-bottom: solid 2px #ed588d
+        font-weight: normal
+      .section
+        font-size: 24px
+        text-align: center
+        color: #aaa
+        font-weight: normal
+    
+    /**
+     * profile
+     */
+    .profile
+      background-color: #fff
+
+      .profile-li
+        position: relative
+        float: left
+        width: 346px
+        height: 400px
+        margin-right: 30px
+        background-color: #f4f4f4
+       
+      .profile-li:last-child
+        margin-right: 0
+      .profile-li:nth-child(1)
+        position: relative
+        background-color: #86c351
+
+        .box
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          display: table
+
+          .info
+            display: table-cell
+            vertical-align: middle
+          
+          .thumb
+            position: relative
+            width: 90px
+            height: 90px
+            margin: 0 auto
+          .thumb:after,
+          .thumb:before
+            position: absolute
+            content: ""
+            display: block
+          .thumb:before
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(255,255,255,0.2)
+            border-radius: 50%
+          .thumb:after
+            top: 10px
+            left: 10px
+            width: 70px
+            height: 70px
+            border-radius: 50%
+            background-image: url(../images/profile/yuki540.png)
+            background-size: 100%
+
+          .name
+            position: relative
+            font-size: 24px
+            color: #fff
+            width: 200px
+            height: 30px
+            line-height: 30px
+            text-align: center
+            margin: 10px auto
+          .name:after
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 14px
+            content: ""
+            display: block
+            background-color: rgba(255,255,255,0.2)
+          
+          .about
+            width: 140px
+            height: 35px
+            font-size: 12px
+            color: #4c4c4c
+            line-height: 35px
+            text-align: center
+            background-color: #fff
+            border-radius: 3px
+            margin: 0 auto
+            margin-top: 15px
+            display: block
+            box-shadow: 0 0 7px #777
+            cursor: pointer
+            transition: all 0.35s ease 0s
+
+            .fa
+              font-size: 16px
+              color: #999
+              margin-right: 5px
+          .about:hover
+            box-shadow: 0 0 20px #777
+
+
+          p
+            font-size: 12px
+            text-align: center
+            color: #fff
+            height: 20px
+            line-height: 20px
+            margin-bottom: 2px
+
+            .fa
+              font-size: 15px
+              margin-right: 8px
+
+        .line
+          position: absolute
+          width: 20px
+          height: 20px
+        .line:after,
+        .line:before
+          position: absolute
+          background-color: #fff
+          content: ""
+          display: block
+        .line:nth-child(1)
+          top: 10px
+          left: 10px
+        .line:nth-child(1):after
+          top: 0
+          left: 0
+          width: 100%
+          height: 1px
+        .line:nth-child(1):before
+          top: 0
+          left: 0
+          width: 1px
+          height: 100%
+        .line:nth-child(2)
+          top: 10px
+          right: 10px
+        .line:nth-child(2):after
+          top: 0
+          right: 0
+          width: 100%
+          height: 1px
+        .line:nth-child(2):before
+          top: 0
+          right: 0
+          width: 1px
+          height: 100%
+        .line:nth-child(3)
+          bottom: 10px
+          left: 10px
+        .line:nth-child(3):after
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 1px
+        .line:nth-child(3):before
+          bottom: 0
+          left: 0
+          width: 1px
+          height: 100%
+        .line:nth-child(4)
+          bottom: 10px
+          right: 10px
+        .line:nth-child(4):after
+          bottom: 0
+          right: 0
+          width: 100%
+          height: 1px
+        .line:nth-child(4):before
+          bottom: 0
+          right: 0
+          width: 1px
+          height: 100%
+        
+      .profile-li:nth-child(2)
+        background-color: transparent
+        .text
+          position: absolute
+          width: 330px
+          height: 25px
+          font-size: 18px
+          color: #4c4c4c
+        .content-name
+          top: 140px
+          left: 140px
+          transform: rotate(75deg)
+        .content-name:after
+          background-color: #ed588d
+        .full-name
+          top: 235px
+          left: -125px
+          transform: rotate(-105deg)
+        .full-name:after
+          background-color: #86c351
+        .text:after
+          position: absolute
+          bottom: 3px
+          left: 0
+          width: 100%
+          height: 10px
+          opacity: 0.2
+          content: ""
+          display: block
+        .heart
+          position: absolute
+          top: 0
+          left: 20px
+          width: 70px
+          height: 70px
+          background-image: url(../images/profile/heart.png)
+          background-size: 100%
+          animation: heart 2s ease 0s infinite
+
+        .yome
+          position: absolute
+          top: 25px
+          left: 48px
+          width: 250px
+          height: 350px
+          background-color: #f4f4f4
+          transform: rotate(-15deg)
+          box-sizing: border-box
+          border: solid 10px #fff
+          box-shadow: 0 0 10px #999, 0 0 10px #999 inset
+          border-radius: 3px
+          overflow: hidden
+
+          .yui
+            position: absolute
+            width: 100%
+            height: 100%
+            background-image: url(../images/profile/yome.jpg)
+            background-size: cover
+            background-position: center
+            transform: scale(1.3) rotate(15deg)
+            transition: all 0.5s ease 0s
+          .yui:hover
+            transform: scale(1.5) rotate(15deg)
+
+      .profile-li:nth-child(3)
+        position: relative
+        background-color: #ed588d
+
+        .box
+          position: absolute
+          top: 20px
+          left: 20px
+          width: 306px
+          height: 360px
+
+          h3
+            height: 25px
+            font-size: 18px
+            line-height: 25px
+            color: #fff
+            padding-left: 10px
+            box-sizing: border-box
+            border-left: solid 10px #fff
+          p
+            position: relative
+            width: 220px
+            height: 25px
+            margin: 0 auto
+            font-size: 20px
+            color: #fff
+            line-height: 25px
+            text-align: center
+            margin-top: 10px
+            margin-bottom: 20px
+          p:after
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 15px
+            content: ""
+            display: block
+            background-color: rgba(255,255,255,0.1)
+
+        .line
+          position: absolute
+          background-color: #fff
+        .line:nth-child(1)
+          top: 10px
+          left: 20px
+          width: 306px
+          height: 1px
+        .line:nth-child(2)
+          bottom: 10px
+          left: 20px
+          width: 306px
+          height: 1px
+        .line:nth-child(3)
+          position: absolute
+          top: 20px
+          left: 10px
+          width: 1px
+          height: 360px
+        .line:nth-child(4)
+          position: absolute
+          top: 20px
+          right: 10px
+          width: 1px
+          height: 360px
