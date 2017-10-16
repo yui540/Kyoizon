@@ -100,8 +100,8 @@
     "description": "白を基調としたデザイン",
     "tags": ["Webデザイン"],
     "date": "2017/6/28",
-    "thumb": "./images/product/oregairu.png",
-    "link": "./product/oregairu"
+    "thumb": "./images/product/yuki540_v1.png",
+    "link": "./product/v1"
   },
   {
     "name": "俺ガイル非公式サイト",
@@ -116,7 +116,7 @@
     "description": "待ち望んだ全ては-----そこにあるの",
     "tags": ["MAD", "動画編集"],
     "date": "2015/05/30",
-    "thumb": "./images/product/oregairu.png",
-    "link": "./product/oregairu"
+    "thumb": "./images/product/colorful_step.png",
+    "link": "http://www.nicovideo.jp/watch/sm26374280"
   }
 ]
