@@ -24,7 +24,8 @@
     "gulp-sass-glob": "^1.0.8",
     "gutil": "^1.6.4",
     "jquery": "^3.2.1",
-    "react": "^15.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
 }

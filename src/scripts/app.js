@@ -1,19 +1,37 @@
+import React        from 'react'
 import * as util    from './lib/util'
 import preload_json from './config/preload.json'
+import $            from 'jquery'
+import ProductBox   from './components/product-box.jsx'
+import { render }   from 'react-dom'
 
 const device = util.isPC() ? 'pc' : 'sp'
 ,     json   = preload_json[device].concat(preload_json['common'])
+,     params = { type: 'get', dataType : 'json' }
 
 const menu_btn   = document.querySelector('.sp-menu')
 ,     close_btn  = document.querySelector('.close')
 ,     global_nav = document.querySelector('.global-nav')
 
+// リサイズ
 resize()
+
+// 画像のプリロード
 util.preload(json, () => {
   setTimeout(() => { loadFinish() }, 500)
 }, (data) => {
   const per = data.progress * 100
   document.querySelector('.bar').style.width = `${ per }%`
+})
+
+// product
+$.ajax('./config/product.json', params).done((json) => {
+  render(
+    <ProductBox
+      json={ json }
+    />,
+    document.getElementById('product-box')
+  )
 })
 
 /* resize -------------------------------------------------------------------- */
