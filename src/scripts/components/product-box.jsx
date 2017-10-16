@@ -17,13 +17,13 @@ export default class ProductBox extends React.Component {
             href={ product.link } 
             key={ key } 
             target="_blank">
-            <div className="thumb" 
-              style={{ backgroundImage: `url(${ product.thumb })` }}>
-              <div className="tags">
-              {product.tags.map((tag, key) => {
-                return <div className="tag" key={ key }>{ tag }</div>
-              })}
-              </div>
+            <div className="thumb"> 
+              <div style={{ backgroundImage: `url(${ product.thumb })` }}></div>
+            </div>
+            <div className="tags">
+            {product.tags.map((tag, key) => {
+              return <div className="tag" key={ key }>{ tag }</div>
+            })}
             </div>
             <h3 className="name">{ product.name }</h3>
             <p className="description">{ product.description }</p>
