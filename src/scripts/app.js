@@ -1,10 +1,12 @@
-import React        from 'react'
-import * as util    from './lib/util'
-import preload_json from './config/preload.json'
-import $            from 'jquery'
-import ProductBox   from './components/product-box.jsx'
-import { render }   from 'react-dom'
-import product_json from '../config/product.json'
+import React            from 'react'
+import * as util        from './lib/util'
+import $                from 'jquery'
+import ProductBox       from './components/product-box.jsx'
+import AchievementBox   from './components/achievement-box.jsx'
+import { render }       from 'react-dom'
+import preload_json     from './config/preload.json'
+import product_json     from './config/product.json'
+import achievement_json from './config/achievement.json'
 
 const device = util.isPC() ? 'pc' : 'sp'
 ,     json   = preload_json[device].concat(preload_json['common'])
@@ -30,6 +32,14 @@ render(
     json={ product_json }
   />,
   document.getElementById('product-box')
+)
+
+// achievement
+render(
+  <AchievementBox
+    json={ achievement_json }
+  />,
+  document.getElementById('achievement-box')
 )
 
 /* resize -------------------------------------------------------------------- */
