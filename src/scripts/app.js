@@ -16,6 +16,7 @@ const device = util.isPC() ? 'pc' : 'sp'
 const menu_btn   = document.querySelector('.sp-menu')
 ,     close_btn  = document.querySelector('.close')
 ,     global_nav = document.querySelector('.global-nav')
+,     nav_li     = document.querySelectorAll('.nav-li')
 
 // リサイズ
 resize()
@@ -57,17 +58,35 @@ window.addEventListener('resize', () => {
   resize()
 })
 
-/* sp menu show -------------------------------------------------------------- */
+/* sp-menu show -------------------------------------------------------------- */
 menu_btn.addEventListener('click', () => {
   global_nav.setAttribute('data-state', true)
   close_btn.setAttribute('data-state', true)
 }, false)
 
-/* sp menu hidden ------------------------------------------------------------ */
+/* sp-menu hidden ------------------------------------------------------------ */
 close_btn.addEventListener('click', () => {
   global_nav.setAttribute('data-state', false)
   close_btn.setAttribute('data-state', false)
 }, false)
+
+/* nav-li click -------------------------------------------------------------- */
+for(let i=0; i < nav_li.length; i++) {
+  nav_li[i].number
+  nav_li[i].addEventListener('click', function() {
+    let href = this.getAttribute('data-val')
+    ,   y    = document.querySelector(href).offsetTop
+
+    global_nav.setAttribute('data-state', false)
+    close_btn.setAttribute('data-state', false)
+    $("html, body").animate({ scrollTop: y })
+  }, false)
+}
+
+
+
+
+
 
 /**
  * 各パーツのリサイズ
