@@ -580,7 +580,8 @@ iframe {
           height: 360px;
           margin-right: 30px;
           margin-bottom: 30px;
-          display: block; }
+          display: block;
+          transition: all 0.35s ease 0s; }
           #content .product .inner .product-li .thumb {
             position: relative;
             width: 346px;
@@ -647,12 +648,128 @@ iframe {
               display: block; }
         #content .product .inner .product-li:nth-child(3n) {
           margin-right: 0; }
-        #content .product .inner .product-li:hover .thumb div {
-          transform: scale(1.2); }
+        #content .product .inner .product-li:hover {
+          background-color: rgba(255, 255, 255, 0.1); }
+          #content .product .inner .product-li:hover .thumb div {
+            transform: scale(1.2); }
       #content .product .inner:after {
         content: "";
         display: block;
+        clear: both; }
+    #content #achievement {
+      background-color: #eee; }
+      #content #achievement .title {
+        border-color: #ff8100; }
+    #content .achievement {
+      background-color: #eee; }
+      #content .achievement .achievement-li {
+        position: relative;
+        float: left;
+        width: 346px;
+        height: 320px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        display: block;
+        box-shadow: 0 0 10px #ccc;
+        transition: all 0.35s ease 0s; }
+        #content .achievement .achievement-li .thumb {
+          width: 326px;
+          height: 198px;
+          margin: 10px;
+          background-size: cover;
+          background-position: center; }
+        #content .achievement .achievement-li .title {
+          position: relative;
+          width: 326px;
+          font-size: 18px;
+          color: #4c4c4c;
+          margin: 0 auto;
+          padding-bottom: 20px; }
+        #content .achievement .achievement-li .title:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 40px;
+          height: 2px;
+          background-color: #ff8100; }
+        #content .achievement .achievement-li .date {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          font-size: 12px;
+          color: #888; }
+      #content .achievement .achievement-li:nth-child(3n) {
+        margin-right: 0; }
+      #content .achievement .achievement-li:hover {
+        opacity: 0.7; }
+    #content .achievement:after {
+      content: "";
+      display: block;
+      clear: both; }
+    #content #activity .title {
+      border-color: #00d1fb; }
+    #content .activity {
+      position: relative;
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 30px;
+      overflow: hidden; }
+      #content .activity .line {
+        width: 1px;
+        height: 30px;
+        background-color: #ccc;
+        margin-left: 15px; }
+      #content .activity .activity-li {
+        width: 100%; }
+        #content .activity .activity-li .state {
+          float: left;
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+          line-height: 30px;
+          text-align: center;
+          color: #fff;
+          border-radius: 50%;
+          background-color: #ccc; }
+        #content .activity .activity-li .state[data-state="true"] {
+          background-color: #2cbe4e; }
+        #content .activity .activity-li .title {
+          float: left;
+          font-size: 18px;
+          line-height: 30px;
+          margin-left: 15px;
+          height: 30px; }
+        #content .activity .activity-li .date {
+          float: left;
+          position: relative;
+          height: 20px;
+          color: #fff;
+          font-size: 12px;
+          line-height: 20px;
+          background-color: #999;
+          border-radius: 3px;
+          margin-top: 5px;
+          margin-left: 10px;
+          padding: 0 10px; }
+      #content .activity .activity-li:after {
+        content: "";
+        display: block;
         clear: both; } }
+
+@media (min-width: 751px) {
+  #footer {
+    padding: 60px 0;
+    background-color: #333; }
+    #footer #copyright {
+      display: block;
+      width: 600px;
+      height: 54px;
+      background-image: url(../images/copyright.png);
+      background-size: 100%;
+      margin: 0 auto; } }
 
 @media (min-width: 751px) {
   #header .main-visual {
@@ -1009,12 +1126,12 @@ iframe {
             height: 30px;
             background-color: rgba(255, 255, 255, 0.2); }
           #content .profile .profile-li:nth-child(1) .box p {
-            font-size: 28px;
+            font-size: 35px;
             text-align: center;
             color: #fff;
             margin-bottom: 15px; }
             #content .profile .profile-li:nth-child(1) .box p .fa {
-              font-size: 28px;
+              font-size: 35px;
               margin-right: 10px; }
           #content .profile .profile-li:nth-child(1) .box .about {
             display: block;
@@ -1254,7 +1371,7 @@ iframe {
           background-color: #86c351; }
         #content .product .product-li .description,
         #content .product .product-li .date {
-          font-size: 30px;
+          font-size: 40px;
           color: #aaa;
           padding-top: 30px;
           display: block; }
@@ -1270,7 +1387,109 @@ iframe {
             line-height: 50px;
             color: #fff;
             margin-bottom: 20px;
-            background-color: #86c351; } }
+            background-color: #86c351; }
+    #content #achievement {
+      background-color: #eee; }
+      #content #achievement .title {
+        border-color: #ff8100; }
+    #content .achievement {
+      background-color: #eee; }
+      #content .achievement .achievement-li {
+        position: relative;
+        width: 690px;
+        height: 600px;
+        background-color: #fff;
+        box-shadow: 0 0 30px #ccc;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        display: block;
+        padding-top: 20px; }
+        #content .achievement .achievement-li .thumb {
+          width: 650px;
+          height: 394px;
+          background-size: cover;
+          background-position: center;
+          margin: 0 20px; }
+        #content .achievement .achievement-li .title {
+          position: relative;
+          width: 650px;
+          margin: 0 30px;
+          font-size: 35px;
+          color: #000;
+          padding-top: 10px;
+          padding-bottom: 40px; }
+        #content .achievement .achievement-li .title:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 80px;
+          height: 2px;
+          background-color: #ff8100; }
+        #content .achievement .achievement-li .date {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          font-size: 30px;
+          color: #888; }
+    #content #activity .title {
+      border-color: #00d1fb; }
+    #content .activity .line {
+      width: 2px;
+      height: 60px;
+      background-color: #ccc;
+      margin-left: 40px; }
+    #content .activity .activity-li {
+      position: relative; }
+      #content .activity .activity-li .state {
+        float: left;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-left: 10px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 60px; }
+      #content .activity .activity-li .state[data-state="true"] {
+        background-color: #2cbe4e; }
+      #content .activity .activity-li .title {
+        float: left;
+        width: 650px;
+        height: 60px;
+        font-size: 30px;
+        margin-left: 20px;
+        line-height: 60px;
+        color: #000;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      #content .activity .activity-li .date {
+        position: absolute;
+        bottom: -40px;
+        right: 20px;
+        line-height: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: #999; }
+    #content .activity .activity-li:after {
+      content: "";
+      display: block;
+      clear: both; } }
+
+@media (max-width: 750px) {
+  #footer {
+    padding: 80px 0;
+    background-color: #333; }
+    #footer #copyright {
+      display: block;
+      width: 600px;
+      height: 54px;
+      background-image: url(../images/copyright.png);
+      background-size: 100%;
+      margin: 0 auto; } }
 
 @media (max-width: 750px) {
   #header .main-visual {
