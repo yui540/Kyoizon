@@ -18,7 +18,7 @@
   {
     "name": "shuvi-lib",
     "description": "YouTube IFrame Player APIをゆるふわにラッピングしたライブラリ",
-    "tags": ["Library", "npm"],
+    "tags": ["ライブラリ", "npm"],
     "date": "2017/05/14",
     "thumb": "./images/product/shuvi-lib.jpg",
     "link": "https://github.com/yuki540net/shuvi-lib"
@@ -58,7 +58,7 @@
   {
     "name": "onsen-node",
     "description": "声優ラジオ「音泉」APIライブラリ for Node",
-    "tags": ["Library", "npm"],
+    "tags": ["ライブラリ", "npm"],
     "date": "2017/02/25",
     "thumb": "./images/product/onsen-node.png",
     "link": "https://github.com/yuki540net/onsen-node"
@@ -66,7 +66,7 @@
 {
     "name": "onsen-php",
     "description": "声優ラジオ「音泉」APIライブラリ for PHP",
-    "tags": ["Library", "composer"],
+    "tags": ["ライブラリ", "composer"],
     "date": "2017/02/25",
     "thumb": "./images/product/onsen-php.png",
     "link": "https://github.com/yuki540net/onsen-php"
@@ -74,15 +74,15 @@
   {
     "name": "nicoJS",
     "description": "ニコニコ風コメントを実装するライブラリ",
-    "tags": ["Library", "npm"],
+    "tags": ["ライブラリ", "npm"],
     "date": "2016/09/25",
-    "thumb": "./images/product/nicojs.png",
+    "thumb": "./images/product/nicoJS.png",
     "link": "https://github.com/yuki540net/nicoJS"
   },
   {
     "name": "web-icon-node",
     "description": "Webクリップアイコンを取得するライブラリ",
-    "tags": ["Library", "npm"],
+    "tags": ["ライブラリ", "npm"],
     "date": "2017/03/28",
     "thumb": "./images/product/web-icon-node.png",
     "link": "https://github.com/yuki540net/web-icon-node"

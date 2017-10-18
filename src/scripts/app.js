@@ -4,10 +4,10 @@ import preload_json from './config/preload.json'
 import $            from 'jquery'
 import ProductBox   from './components/product-box.jsx'
 import { render }   from 'react-dom'
+import product_json from '../config/product.json'
 
 const device = util.isPC() ? 'pc' : 'sp'
 ,     json   = preload_json[device].concat(preload_json['common'])
-,     params = { type: 'get', dataType : 'json' }
 
 const menu_btn   = document.querySelector('.sp-menu')
 ,     close_btn  = document.querySelector('.close')
@@ -25,14 +25,12 @@ util.preload(json, () => {
 })
 
 // product
-$.ajax('./config/product.json', params).done((json) => {
-  render(
-    <ProductBox
-      json={ json }
-    />,
-    document.getElementById('product-box')
-  )
-})
+render(
+  <ProductBox
+    json={ product_json }
+  />,
+  document.getElementById('product-box')
+)
 
 /* resize -------------------------------------------------------------------- */
 window.addEventListener('resize', () => {
