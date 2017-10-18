@@ -510,3 +510,62 @@
       content: ""
       display: block
       clear: both
+
+    #activity
+      
+      .title
+        border-color: #00d1fb
+
+    .activity
+      position: relative
+      width: 600px
+      margin: 0 auto
+      margin-top: 30px
+      overflow: hidden
+
+      .line
+        width: 1px
+        height: 30px
+        background-color: #ccc
+        margin-left: 15px
+
+      .activity-li
+        width: 100%
+
+        .state
+          float: left
+          width: 30px
+          height: 30px
+          font-size: 16px
+          line-height: 30px
+          text-align: center
+          color: #fff
+          border-radius: 50%
+          background-color: #ccc
+        .state[data-state="true"]
+          background-color: #2cbe4e
+
+        .title
+          float: left
+          font-size: 18px
+          line-height: 30px
+          margin-left: 15px
+          height: 30px
+
+        .date
+          float: left
+          position: relative
+          height: 20px
+          color: #fff
+          font-size: 12px
+          line-height: 20px
+          background-color: #999
+          border-radius: 3px
+          margin-top: 5px
+          margin-left: 10px
+          padding: 0 10px
+
+      .activity-li:after
+        content: ""
+        display: block
+        clear: both

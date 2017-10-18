@@ -3,10 +3,12 @@ import * as util        from './lib/util'
 import $                from 'jquery'
 import ProductBox       from './components/product-box.jsx'
 import AchievementBox   from './components/achievement-box.jsx'
+import ActivityBox      from './components/activity-box.jsx'
 import { render }       from 'react-dom'
 import preload_json     from './config/preload.json'
 import product_json     from './config/product.json'
 import achievement_json from './config/achievement.json'
+import activity_json    from './config/activity.json'
 
 const device = util.isPC() ? 'pc' : 'sp'
 ,     json   = preload_json[device].concat(preload_json['common'])
@@ -40,6 +42,14 @@ render(
     json={ achievement_json }
   />,
   document.getElementById('achievement-box')
+)
+
+// activity
+render(
+  <ActivityBox
+    json={ activity_json }
+  />,
+  document.getElementById('activity-box')
 )
 
 /* resize -------------------------------------------------------------------- */
