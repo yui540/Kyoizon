@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="「共依存は仕組みだ。気持ちじゃない。」">
+    <meta name="keywords" content="yuki540.com,yuki540,@eriri_jp,satella.io,Shuvi,若葉,Live2D">
+    <title>共依存</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
+    <meta property="og:url" content="https://yuki540.com">
+    <meta property="og:image" content="https://yuki540.com/images/ogp.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="共依存">
+    <meta property="og:site_name" content="yuki540.com">
+    <meta property="og:description" content="「共依存は仕組みだ。気持ちじゃない。」">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eriri_jp" />
+    <meta name="twitter:title" content="共依存" />
+    <meta name="twitter:description" content="「共依存は仕組みだ。気持ちじゃない。」" />
+    <meta name="twitter:image" content="https://yuki540.com/images/ogp.png" />
+    <link rel="shortcut icon" href="./images/icon.png" />
+    <link rel="apple-touch-icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="./stylesheets/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./stylesheets/font.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53682384-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      gtag('js', new Date());
+      gtag('config', 'UA-53682384-5');
+    </script>
+    <style>
+    #load-view:after { background-image: url(./images/load-view/overray.png); }
+
+    .first-view .title div:nth-child(1):after {
+      background-image: url(./images/load-view/title/title_1.png); }
+    .first-view .title div:nth-child(2):after {
+      background-image: url(./images/load-view/title/title_2.png); }
+    .first-view .title div:nth-child(3):after { 
+      background-image: url(./images/load-view/title/title_3.png); }
+    .first-view .title div:nth-child(4):after {
+      background-image: url(./images/load-view/title/title_4.png); }
+    
+    .author div:nth-child(1):after { background-image: url(./images/load-view/author/author_1.png); }
+    .author div:nth-child(2):after { background-image: url(./images/load-view/author/author_2.png); }
+    .author div:nth-child(3):after { background-image: url(./images/load-view/author/author_3.png); }
+    
+    .seconds-view { background-image: url(./images/load-view/bg.png); }
+
+    @media screen and (min-width: 461px) {
+      .illust:nth-child(1) { background-image: url(./images/load-view/yukino/illust_pc.png); }
+      .illust:nth-child(2) { background-image: url(./images/load-view/yui/illust_pc.png); }
+      .illust:nth-child(3) { background-image: url(./images/load-view/hatiman/illust_pc.png); }
+    }
+    @media screen and (max-width: 460px) {
+      .illust:nth-child(1) { background-image: url(./images/load-view/yukino/illust_sp.png); }
+      .illust:nth-child(2) { background-image: url(./images/load-view/yui/illust_sp.png); }
+      .illust:nth-child(3) { background-image: url(./images/load-view/hatiman/illust_sp.png); }
+    }
+
+    /*** yukino ***/
+    .char-name-li:nth-child(1) .text-ja:nth-child(1) {
+      background-image: url(./images/load-view/yukino/name_1.png); }
+    .char-name-li:nth-child(1) .text-ja:nth-child(2) {
+      background-image: url(./images/load-view/yukino/name_2.png); }
+    .char-name-li:nth-child(1) .text-ja:nth-child(3) {
+      background-image: url(./images/load-view/yukino/name_3.png); }
+    .char-name-li:nth-child(1) .text-ja:nth-child(4) {
+      background-image: url(./images/load-view/yukino/name_4.png); }
+    .char-name-li:nth-child(1) .text-ja:nth-child(5) {
+      background-image: url(./images/load-view/yukino/name_5.png); }
+    .char-name-li:nth-child(1) .text-en {
+      background-image: url(./images/load-view/yukino/name_en.png); }
+    
+    /*** yui ***/
+    .char-name-li:nth-child(2) .text-ja:nth-child(1) {
+      background-image: url(./images/load-view/yui/name_1.png); }
+    .char-name-li:nth-child(2) .text-ja:nth-child(2) {
+      background-image: url(./images/load-view/yui/name_2.png); }
+    .char-name-li:nth-child(2) .text-ja:nth-child(3) {
+      background-image: url(./images/load-view/yui/name_3.png); }
+    .char-name-li:nth-child(2) .text-ja:nth-child(4) {
+      background-image: url(./images/load-view/yui/name_4.png); }
+    .char-name-li:nth-child(2) .text-ja:nth-child(5) {
+      background-image: url(./images/load-view/yui/name_5.png); }
+    .char-name-li:nth-child(2) .text-ja:nth-child(6) {
+      background-image: url(./images/load-view/yui/name_6.png); }
+    .char-name-li:nth-child(2) .text-en {
+      background-image: url(./images/load-view/yui/name_en.png); }
+
+    /*** hatiman ***/
+    .char-name-li:nth-child(3) .text-ja:nth-child(1) {
+      background-image: url(./images/load-view/hatiman/name_1.png); }
+    .char-name-li:nth-child(3) .text-ja:nth-child(2) {
+      background-image: url(./images/load-view/hatiman/name_2.png); }
+    .char-name-li:nth-child(3) .text-ja:nth-child(3) {
+      background-image: url(./images/load-view/hatiman/name_3.png); }
+    .char-name-li:nth-child(3) .text-ja:nth-child(4) {
+      background-image: url(./images/load-view/hatiman/name_4.png); }
+    .char-name-li:nth-child(3) .text-ja:nth-child(5) {
+      background-image: url(./images/load-view/hatiman/name_5.png); }
+    .char-name-li:nth-child(3) .text-ja:nth-child(6) {
+      background-image: url(./images/load-view/hatiman/name_6.png); }
+    .char-name-li:nth-child(3) .text-en {
+      background-image: url(./images/load-view/hatiman/name_en.png); }
+    
+    .message-text-1 .true { background-image: url(./images/load-view/true_1.png); }
+    .message-text-1 .false { background-image: url(./images/load-view/false_1.png); }
+    .message-text-2 .true { background-image: url(./images/load-view/true_2.png); }
+    .message-text-2 .false { background-image: url(./images/load-view/false_2.png); }
+    </style>
+  </head>
+  <body>
+    <main id="application">
+      <!-- ******************** load view ********************* -->
+      <div id="load-view">
+        <section class="first-view">
+          <div class="line"><div></div></div>
+          <div class="title-box">
+            <div class="per">0%</div>
+            <div class="title">
+              <div></div><div></div><div></div><div></div>
+            </div>
+            <div class="load-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="author-box">
+            <div class="author">
+              <div></div><div></div><div></div>
+            </div>
+            <div class="endpoint"></div>
+          </div>
+        </section>
+        <section class="seconds-view">
+          <div class="illust"></div>
+          <div class="illust"></div>
+          <div class="illust"></div>
+          <div class="char-name">
+            <section class="char-name-li">
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-en"></div>
+            </section>
+            <section class="char-name-li">
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-en"></div>
+            </section>
+            <section class="char-name-li">
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-en"></div>
+            </section>
+          </div>
+          <div class="message-text message-text-1">
+            <div class="inner">
+              <div class="true"></div>
+              <div class="false"></div>
+            </div>
+          </div>
+          <div class="message-text message-text-2">
+            <div class="inner">
+              <div class="true"></div>
+              <div class="false"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="text/javascript" src="./js/app.min.js"></script>
+  </body>
+</html>

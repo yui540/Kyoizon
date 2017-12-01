@@ -1,0 +1,14 @@
+@keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slidein {
+  0%   { opacity: 0; left: 100%; }
+  100% { opacity: 1; left: 0; }
+}
+
+@keyframes rotate90 {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-90deg); }
+}
