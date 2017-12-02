@@ -1,6 +1,7 @@
 const load_view = document.getElementById('load-view');
 const title = document.querySelectorAll('.title div');
 const progress = document.querySelector('.progress');
+const content = document.getElementById('content');
 
 export const loadAnimation = (per) => {
   if(per >= 0.25)
@@ -20,7 +21,8 @@ export const loadFinishe = () => {
   setTimeout(() => { load_view.setAttribute('data-stage-1', 'active'); }, 1800);
   setTimeout(() => { load_view.setAttribute('data-stage-2', 'active'); }, 2500);
   setTimeout(() => { load_view.setAttribute('data-stage-3', 'active'); }, 3400);
-  setTimeout(() => { load_view.setAttribute('data-fin', 'active'); }, 4300);
+  setTimeout(() => { load_view.setAttribute('data-fin', 'active');     }, 4300);
+  setTimeout(() => { content.setAttribute('data-state', 'active');     }, 7700);
 };
 
 export const setPer = (per) => {

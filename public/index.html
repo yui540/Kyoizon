@@ -22,6 +22,7 @@
     <link rel="apple-touch-icon" href="./images/icon.png" />
     <link rel="stylesheet" href="./stylesheets/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./stylesheets/font.css" />
+    <link rel="stylesheet" href="./stylesheets/images.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53682384-5"></script>
     <script>
@@ -31,86 +32,6 @@
       gtag('js', new Date());
       gtag('config', 'UA-53682384-5');
     </script>
-    <style>
-    #load-view:after { background-image: url(./images/load-view/overray.png); }
-
-    .first-view .title div:nth-child(1):after {
-      background-image: url(./images/load-view/title/title_1.png); }
-    .first-view .title div:nth-child(2):after {
-      background-image: url(./images/load-view/title/title_2.png); }
-    .first-view .title div:nth-child(3):after { 
-      background-image: url(./images/load-view/title/title_3.png); }
-    .first-view .title div:nth-child(4):after {
-      background-image: url(./images/load-view/title/title_4.png); }
-    
-    .author div:nth-child(1):after { background-image: url(./images/load-view/author/author_1.png); }
-    .author div:nth-child(2):after { background-image: url(./images/load-view/author/author_2.png); }
-    .author div:nth-child(3):after { background-image: url(./images/load-view/author/author_3.png); }
-    
-    .seconds-view { background-image: url(./images/load-view/bg.png); }
-
-    @media screen and (min-width: 461px) {
-      .illust:nth-child(1) { background-image: url(./images/load-view/yukino/illust_pc.png); }
-      .illust:nth-child(2) { background-image: url(./images/load-view/yui/illust_pc.png); }
-      .illust:nth-child(3) { background-image: url(./images/load-view/hatiman/illust_pc.png); }
-    }
-    @media screen and (max-width: 460px) {
-      .illust:nth-child(1) { background-image: url(./images/load-view/yukino/illust_sp.png); }
-      .illust:nth-child(2) { background-image: url(./images/load-view/yui/illust_sp.png); }
-      .illust:nth-child(3) { background-image: url(./images/load-view/hatiman/illust_sp.png); }
-    }
-
-    /*** yukino ***/
-    .char-name-li:nth-child(1) .text-ja:nth-child(1) {
-      background-image: url(./images/load-view/yukino/name_1.png); }
-    .char-name-li:nth-child(1) .text-ja:nth-child(2) {
-      background-image: url(./images/load-view/yukino/name_2.png); }
-    .char-name-li:nth-child(1) .text-ja:nth-child(3) {
-      background-image: url(./images/load-view/yukino/name_3.png); }
-    .char-name-li:nth-child(1) .text-ja:nth-child(4) {
-      background-image: url(./images/load-view/yukino/name_4.png); }
-    .char-name-li:nth-child(1) .text-ja:nth-child(5) {
-      background-image: url(./images/load-view/yukino/name_5.png); }
-    .char-name-li:nth-child(1) .text-en {
-      background-image: url(./images/load-view/yukino/name_en.png); }
-    
-    /*** yui ***/
-    .char-name-li:nth-child(2) .text-ja:nth-child(1) {
-      background-image: url(./images/load-view/yui/name_1.png); }
-    .char-name-li:nth-child(2) .text-ja:nth-child(2) {
-      background-image: url(./images/load-view/yui/name_2.png); }
-    .char-name-li:nth-child(2) .text-ja:nth-child(3) {
-      background-image: url(./images/load-view/yui/name_3.png); }
-    .char-name-li:nth-child(2) .text-ja:nth-child(4) {
-      background-image: url(./images/load-view/yui/name_4.png); }
-    .char-name-li:nth-child(2) .text-ja:nth-child(5) {
-      background-image: url(./images/load-view/yui/name_5.png); }
-    .char-name-li:nth-child(2) .text-ja:nth-child(6) {
-      background-image: url(./images/load-view/yui/name_6.png); }
-    .char-name-li:nth-child(2) .text-en {
-      background-image: url(./images/load-view/yui/name_en.png); }
-
-    /*** hatiman ***/
-    .char-name-li:nth-child(3) .text-ja:nth-child(1) {
-      background-image: url(./images/load-view/hatiman/name_1.png); }
-    .char-name-li:nth-child(3) .text-ja:nth-child(2) {
-      background-image: url(./images/load-view/hatiman/name_2.png); }
-    .char-name-li:nth-child(3) .text-ja:nth-child(3) {
-      background-image: url(./images/load-view/hatiman/name_3.png); }
-    .char-name-li:nth-child(3) .text-ja:nth-child(4) {
-      background-image: url(./images/load-view/hatiman/name_4.png); }
-    .char-name-li:nth-child(3) .text-ja:nth-child(5) {
-      background-image: url(./images/load-view/hatiman/name_5.png); }
-    .char-name-li:nth-child(3) .text-ja:nth-child(6) {
-      background-image: url(./images/load-view/hatiman/name_6.png); }
-    .char-name-li:nth-child(3) .text-en {
-      background-image: url(./images/load-view/hatiman/name_en.png); }
-    
-    .message-text-1 .true { background-image: url(./images/load-view/true_1.png); }
-    .message-text-1 .false { background-image: url(./images/load-view/false_1.png); }
-    .message-text-2 .true { background-image: url(./images/load-view/true_2.png); }
-    .message-text-2 .false { background-image: url(./images/load-view/false_2.png); }
-    </style>
   </head>
   <body>
     <main id="application">
@@ -180,6 +101,48 @@
           </div>
         </section>
       </div>
+      <!-- ******************** content ********************* -->
+      <article id="content">
+        <section class="label-box">
+          <div class="label"></div>
+          <div class="label"></div>
+          <div class="label"></div>
+          <div class="label"></div>
+          <div class="vertex vertex-1"></div>
+          <div class="vertex vertex-2"></div>
+          <div class="vertex vertex-3"></div>
+          <div class="vertex vertex-4"></div>
+        </section>
+        <section class="main-illust">
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+        </section>
+        <section class="site-name">
+          <div class="designer">Designed by yuki540.</div>
+          <div class="panel-box">
+            <div class="name-box">
+              <div class="fake-name">
+                <div class="inner">
+                  <div class="word"><div></div></div>
+                  <div class="word"><div></div></div>
+                  <div class="word"><div></div></div>
+                  <div class="word"><div></div></div>
+                </div>
+              </div>
+              <div class="genuine-name">
+                <div class="inner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
     </main>
     <script type="text/javascript" src="./js/app.min.js"></script>
   </body>
