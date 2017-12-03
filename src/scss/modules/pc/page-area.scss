@@ -58,6 +58,12 @@
     .page-box { animation: page-area__show-page 0.5s ease 0s forwards; }
   }
 
+  #page-area[data-href="profile"] #profile { display: block; }
+  #page-area[data-href="history"] #history { display: block; }
+  #page-area[data-href="product"] #product { display: block; }
+  #page-area[data-href="memories"] #memories { display: block; }
+  #page-area[data-href="news"] #news { display: block; }
+  
   #page-area[data-href=""] {
     .page-box { animation: page-area__hidden-page 0.5s ease 0s forwards; }
   }

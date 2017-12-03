@@ -18,6 +18,8 @@ import '../scss/modules/pc/navigation-area.scss';
 import '../scss/modules/sp/navigation-area.scss';
 import '../scss/modules/pc/page-area.scss';
 import '../scss/modules/sp/page-area.scss';
+import '../scss/modules/pc/profile.scss';
+import '../scss/modules/sp/profile.scss';
 
 const device = util.isPC() ? 'pc' : 'sp';
 
