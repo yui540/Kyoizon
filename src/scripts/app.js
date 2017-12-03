@@ -14,6 +14,8 @@ import '../scss/modules/pc/load-view.scss';
 import '../scss/modules/sp/load-view.scss';
 import '../scss/modules/pc/content.scss';
 import '../scss/modules/sp/content.scss';
+import '../scss/modules/pc/navigation-area.scss';
+import '../scss/modules/sp/navigation-area.scss';
 
 const device = util.isPC() ? 'pc' : 'sp';
 
@@ -38,3 +40,15 @@ if(device === 'pc') {
     node.style.width = `${ width }px`;
   });
 }
+
+const navigation_area = document.getElementById('navigation-area');
+const nav_btn = document.querySelector('.nav-btn');
+const nav_close_btn = document.querySelector('.nav-close-btn');
+
+nav_btn.addEventListener('click', () => {
+  navigation_area.setAttribute('data-state', 'active');
+}, false);
+
+nav_close_btn.addEventListener('click', () => {
+  navigation_area.setAttribute('data-state', 'passive');
+}, false);

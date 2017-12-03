@@ -263,6 +263,13 @@
 
       .designer { animation: content__show-designer_sp 1s ease 5.8s forwards; }
     }
+
+    /**
+     * navigation area
+     */
+    #navigation-area {
+      .nav-btn { animation: fadein 0.5s ease 6.8s forwards; }
+    }
   }
 }
 
