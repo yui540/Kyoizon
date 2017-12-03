@@ -1,5 +1,3 @@
-#load-view:after { background-image: url(../images/load-view/overray.png); }
-
 .first-view .title div:nth-child(1):after {
   background-image: url(../images/load-view/title/title_1.png); }
 .first-view .title div:nth-child(2):after {

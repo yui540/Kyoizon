@@ -16,6 +16,8 @@ import '../scss/modules/pc/content.scss';
 import '../scss/modules/sp/content.scss';
 import '../scss/modules/pc/navigation-area.scss';
 import '../scss/modules/sp/navigation-area.scss';
+import '../scss/modules/pc/page-area.scss';
+import '../scss/modules/sp/page-area.scss';
 
 const device = util.isPC() ? 'pc' : 'sp';
 
@@ -44,6 +46,9 @@ if(device === 'pc') {
 const navigation_area = document.getElementById('navigation-area');
 const nav_btn = document.querySelector('.nav-btn');
 const nav_close_btn = document.querySelector('.nav-close-btn');
+const nav_li = document.querySelectorAll('.nav-li');
+const page_area = document.getElementById('page-area');
+const page_close_btn = document.querySelector('.page-close-btn');
 
 nav_btn.addEventListener('click', () => {
   navigation_area.setAttribute('data-state', 'active');
@@ -51,4 +56,19 @@ nav_btn.addEventListener('click', () => {
 
 nav_close_btn.addEventListener('click', () => {
   navigation_area.setAttribute('data-state', 'passive');
+}, false);
+
+nav_li.forEach((li) => {
+  li.addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.href.match(/#(.*)/)[1];
+    
+    page_area.style.display = 'block';
+    page_area.setAttribute('data-href', href);
+  }, false);
+});
+
+page_close_btn.addEventListener('click', () => {
+  setTimeout(() => { page_area.style.display = 'none'; }, 500);
+  page_area.setAttribute('data-href', '');
 }, false);
