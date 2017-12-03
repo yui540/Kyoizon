@@ -20,6 +20,8 @@ import '../scss/modules/pc/page-area.scss';
 import '../scss/modules/sp/page-area.scss';
 import '../scss/modules/pc/profile.scss';
 import '../scss/modules/sp/profile.scss';
+import '../scss/modules/pc/history.scss';
+import '../scss/modules/sp/history.scss';
 
 const device = util.isPC() ? 'pc' : 'sp';
 

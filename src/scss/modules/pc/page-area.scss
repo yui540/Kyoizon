@@ -7,6 +7,32 @@
     height: calc(100% - 80px);
     overflow: hidden;
     display: none;
+    
+    .page-close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: all 0.35s ease 0s;
+    }
+    .page-close-btn:before,
+    .page-close-btn:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 29.5px;
+      left: 5px;
+      width: 50px;
+      height: 1px;
+      background-color: #7E3D34;
+    }
+    .page-close-btn:before { transform: rotate(45deg); }
+    .page-close-btn:after { transform: rotate(-45deg); }
+    .page-close-btn:hover { background-color: #7E3D34; }
+    .page-close-btn:hover:before,
+    .page-close-btn:hover:after { background-color: #fff; }
 
     .page-box {
       position: absolute;
@@ -21,32 +47,6 @@
         width: 490px;
         margin: 0 auto;
       }
-
-      .page-close-btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60px;
-        height: 60px;
-        cursor: pointer;
-        transition: all 0.35s ease 0s;
-      }
-      .page-close-btn:before,
-      .page-close-btn:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 29.5px;
-        left: 5px;
-        width: 50px;
-        height: 1px;
-        background-color: #7E3D34;
-      }
-      .page-close-btn:before { transform: rotate(45deg); }
-      .page-close-btn:after { transform: rotate(-45deg); }
-      .page-close-btn:hover { background-color: #7E3D34; }
-      .page-close-btn:hover:before,
-      .page-close-btn:hover:after { background-color: #fff; }
     }
   }
 
