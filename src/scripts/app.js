@@ -65,20 +65,25 @@ util.preload(preload_json[device], () => {
   yuki540.setPer(data.per);
 });
 
-// devices
-if(device === 'pc') {
-  const width = window.innerWidth >= 1100 ? window.innerWidth : 1100;
-  const main_illust = document.querySelectorAll('.main-illust-li div'); 
-  main_illust.forEach((node) => {
-    node.style.width = `${ width / 2 - 40 }px`;
-  });
-} else {
-  const width = screen.width;
-  const main_illust = document.querySelectorAll('.main-illust-li div');
-  main_illust.forEach((node) => {
-    node.style.width = `${ width }px`;
-  });
-}
+const setSize = () => {
+  // devices
+  if(device === 'pc') {
+    const width = window.innerWidth >= 1100 ? window.innerWidth : 1100;
+    const main_illust = document.querySelectorAll('.main-illust-li div'); 
+    main_illust.forEach((node) => {
+      node.style.width = `${ width / 2 - 40 }px`;
+    });
+  } else {
+    const width = screen.width;
+    const main_illust = document.querySelectorAll('.main-illust-li div');
+    main_illust.forEach((node) => {
+      node.style.width = `${ width }px`;
+    });
+  }
+};
+
+window.addEventListener('load', setSize, false);
+window.addEventListener('resize', setSize, false);
 
 nav_btn.addEventListener('click', () => {
   navigation_area.setAttribute('data-state', 'active');

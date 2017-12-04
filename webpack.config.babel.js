@@ -36,6 +36,7 @@ const js = {
     port: 8080
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
     new WebpackNotifierPlugins()
   ]
 };

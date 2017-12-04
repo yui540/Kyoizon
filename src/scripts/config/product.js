@@ -69,7 +69,7 @@ export default {
   "design": [
     {
       "name": "俺ガイル非公式サイト",
-      "link": "",
+      "link": "https://oregairu.yuki540.com",
       "thumb": "./images/product/oregairu.png",
       "description": "『俺は、本物が欲しい。』",
       "date": "2016/03/20"
@@ -84,5 +84,4 @@ export default {
       "date": "2015/05/30"
     }
   ]
-
 }

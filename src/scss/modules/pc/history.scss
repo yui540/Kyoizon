@@ -28,6 +28,7 @@
 
       .description {
         font-size: 15px;
+        line-height: 20px;
         padding: 0 10px;
         margin-bottom: 10px;
         box-sizing: border-box;
@@ -39,6 +40,21 @@
         margin: 20px auto;
         box-shadow: 0 0 10px #ccc;
       }
+
+      a {
+        display: block;
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 10px;
+        border: solid 1px #8D3C34;
+        color: #8D3C34;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        transition: all 0.35s ease 0s;
+      }
+      a:hover { background-color: #8D3C34; color: #fff; }
     }
     .history-li:first-child { margin-top: 70px; }
   }
