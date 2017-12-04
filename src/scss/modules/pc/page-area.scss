@@ -1,0 +1,79 @@
+@media screen and (min-width: 481px) {
+  #page-area {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: calc(50% - 40px);
+    height: calc(100% - 80px);
+    overflow: hidden;
+    display: none;
+    
+    .page-close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: all 0.35s ease 0s;
+    }
+    .page-close-btn:before,
+    .page-close-btn:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 29.5px;
+      left: 5px;
+      width: 50px;
+      height: 1px;
+      background-color: #7E3D34;
+    }
+    .page-close-btn:before { transform: rotate(45deg); }
+    .page-close-btn:after { transform: rotate(-45deg); }
+    .page-close-btn:hover { background-color: #7E3D34; }
+    .page-close-btn:hover:before,
+    .page-close-btn:hover:after { background-color: #fff; }
+
+    .page-box {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      overflow: auto;
+
+      .inner {
+        width: 490px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #page-area[data-href="profile"],
+  #page-area[data-href="history"],
+  #page-area[data-href="product"],
+  #page-area[data-href="memories"],
+  #page-area[data-href="news"] {
+    .page-box { animation: page-area__show-page 0.5s ease 0s forwards; }
+  }
+
+  #page-area[data-href="profile"] #profile { display: block; }
+  #page-area[data-href="history"] #history { display: block; }
+  #page-area[data-href="product"] #product { display: block; }
+  #page-area[data-href="memories"] #memories { display: block; }
+  #page-area[data-href="news"] #news { display: block; }
+  
+  #page-area[data-href=""] {
+    .page-box { animation: page-area__hidden-page 0.5s ease 0s forwards; }
+  }
+}
+
+@keyframes page-area__show-page {
+  0%   { left: -100%; }
+  100% { left: 0; }
+}
+@keyframes page-area__hidden-page {
+  0%   { left: 0%; }
+  100% { left: -100%; }
+}

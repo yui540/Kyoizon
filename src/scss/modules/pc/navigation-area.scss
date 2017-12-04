@@ -1,0 +1,143 @@
+@media screen and (min-width: 481px) {
+  #navigation-area {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: calc(50% - 40px);
+    height: calc(100% - 80px);
+    overflow: hidden;
+
+    /**
+     * nav btn
+     */
+    .nav-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      cursor: pointer;
+      overflow: hidden;
+      opacity: 0;
+
+      div {
+        position: absolute;
+        left: 15px;
+        width: 50px;
+        height: 1px;
+        background-color: #4c4c4c;
+      }
+      div:nth-child(1) { top: 21.5px; }
+      div:nth-child(2) { top: 39.5px; }
+      div:nth-child(3) { top: 57.5px; }
+    }
+    .nav-btn:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #7E3D34;
+      transition: all 0.35s ease 0s;
+    }
+    .nav-btn:hover {
+      div { background-color: #fff; }
+    }
+    .nav-btn:hover:before {
+      bottom: 0;
+    }
+
+    /**
+     * nav box
+     */
+    .nav-box {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #7E3D34;
+      display: table;
+      transition: all 0.5s ease 0s;
+
+      .nav-close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        transition: all 0.35s ease 0s;
+      }
+      .nav-close-btn:before,
+      .nav-close-btn:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 29.5px;
+        left: 5px;
+        width: 50px;
+        height: 1px;
+        background-color: #fff;
+      }
+      .nav-close-btn:before { transform: rotate(45deg); }
+      .nav-close-btn:after { transform: rotate(-45deg); }
+      .nav-close-btn:hover { background-color: #fff; }
+      .nav-close-btn:hover:before,
+      .nav-close-btn:hover:after { background-color: #7E3D34; }
+
+      .inner {
+        vertical-align: middle;
+        display: table-cell;
+
+        .nav-li {
+          display: block;
+          margin: 30px 0;
+          margin-left: 50px;
+          color: #fff;
+          transition: all 0.35s ease 0s;
+
+          span {
+            display: block;
+            float: left;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            border-top: dashed 1px #fff;
+            border-bottom: dashed 1px #fff;
+            border-left: dashed 1px #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+          }
+          span:last-child { border-right: dashed 1px #fff; }
+        }
+        .nav-li:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        .nav-li:hover {
+          background-color: #fff;
+          color: #7E3D34;
+        }
+        .nav-li:nth-child(1) { width: 250px; }
+        .nav-li:nth-child(2) { width: 400px; }
+        .nav-li:nth-child(3) { width: 250px; }
+        .nav-li:nth-child(4) { width: 150px; }
+        .nav-li:nth-child(5) { width: 200px; }
+      }
+    }
+  }
+
+  #navigation-area[data-state="active"] {
+    .nav-box { left: 0; }
+  }
+
+  #navigation-area[data-state="passive"] {
+    .nav-box { left: -100%; }
+  }
+}

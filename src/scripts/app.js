@@ -1,142 +1,109 @@
-import React            from 'react'
-import * as util        from './lib/util'
-import $                from 'jquery'
-import ProductBox       from './components/product-box.jsx'
-import AchievementBox   from './components/achievement-box.jsx'
-import ActivityBox      from './components/activity-box.jsx'
-import { render }       from 'react-dom'
-import preload_json     from './config/preload.json'
-import product_json     from './config/product.json'
-import achievement_json from './config/achievement.json'
-import activity_json    from './config/activity.json'
+import React from 'react';
+import { render } from 'react-dom';
+import * as util from './lib/util';
+import * as yuki540 from './lib/yuki540';
+import preload_json from './config/preload';
 
-const device = util.isPC() ? 'pc' : 'sp'
-,     json   = preload_json[device].concat(preload_json['common'])
+// components
+import Product from './components/product.jsx';
+import Memories from './components/memories.jsx';
+import News from './components/news.jsx';
 
-const menu_btn   = document.querySelector('.sp-menu')
-,     close_btn  = document.querySelector('.close')
-,     global_nav = document.querySelector('.global-nav')
-,     nav_li     = document.querySelectorAll('.nav-li')
+// style
+import '../scss/function.scss';
+import '../scss/keyframes.scss';
+import '../scss/mixin.scss';
+import '../scss/variable.scss';
+import '../scss/modules/base.scss';
+import '../scss/modules/app.scss';
+import '../scss/modules/pc/load-view.scss';
+import '../scss/modules/sp/load-view.scss';
+import '../scss/modules/pc/content.scss';
+import '../scss/modules/sp/content.scss';
+import '../scss/modules/pc/navigation-area.scss';
+import '../scss/modules/sp/navigation-area.scss';
+import '../scss/modules/pc/page-area.scss';
+import '../scss/modules/sp/page-area.scss';
+import '../scss/modules/pc/profile.scss';
+import '../scss/modules/sp/profile.scss';
+import '../scss/modules/pc/history.scss';
+import '../scss/modules/sp/history.scss';
+import '../scss/modules/pc/product.scss';
+import '../scss/modules/sp/product.scss';
+import '../scss/modules/pc/memories.scss';
+import '../scss/modules/sp/memories.scss';
+import '../scss/modules/pc/news.scss';
+import '../scss/modules/sp/news.scss';
 
-// リサイズ
-resize()
+document.body.style.display = 'block';
 
-// 画像のプリロード
-util.preload(json, () => {
-  setTimeout(() => { loadFinish() }, 500)
+const device = util.isPC() ? 'pc' : 'sp';
+const navigation_area = document.getElementById('navigation-area');
+const nav_btn = document.querySelector('.nav-btn');
+const nav_close_btn = document.querySelector('.nav-close-btn');
+const nav_li = document.querySelectorAll('.nav-li');
+const page_area = document.getElementById('page-area');
+const page_close_btn = document.querySelector('.page-close-btn');
+
+render(
+  <Product />,
+  document.getElementById('product')
+);
+render(
+  <Memories />,
+  document.getElementById('memories')
+);
+render(
+  <News />,
+  document.getElementById('news')
+);
+
+// images preload
+util.preload(preload_json[device], () => {
+  yuki540.introAnimation();
 }, (data) => {
-  const per = data.progress * 100
-  document.querySelector('.bar').style.width = `${ per }%`
-})
+  yuki540.setPer(data.per);
+});
 
-// product
-render(
-  <ProductBox
-    json={ product_json }
-  />,
-  document.getElementById('product-box')
-)
-
-// achievement
-render(
-  <AchievementBox
-    json={ achievement_json }
-  />,
-  document.getElementById('achievement-box')
-)
-
-// activity
-render(
-  <ActivityBox
-    json={ activity_json }
-  />,
-  document.getElementById('activity-box')
-)
-
-/* resize -------------------------------------------------------------------- */
-window.addEventListener('resize', () => {
-  resize()
-})
-
-/* sp-menu show -------------------------------------------------------------- */
-menu_btn.addEventListener('click', () => {
-  global_nav.setAttribute('data-state', true)
-  close_btn.setAttribute('data-state', true)
-}, false)
-
-/* sp-menu hidden ------------------------------------------------------------ */
-close_btn.addEventListener('click', () => {
-  global_nav.setAttribute('data-state', false)
-  close_btn.setAttribute('data-state', false)
-}, false)
-
-/* nav-li click -------------------------------------------------------------- */
-for(let i=0; i < nav_li.length; i++) {
-  nav_li[i].number
-  nav_li[i].addEventListener('click', function() {
-    let href = this.getAttribute('data-val')
-    ,   y    = document.querySelector(href).offsetTop
-
-    global_nav.setAttribute('data-state', false)
-    close_btn.setAttribute('data-state', false)
-    $("html, body").animate({ scrollTop: y })
-  }, false)
-}
-
-
-
-
-
-
-/**
- * 各パーツのリサイズ
- */
-function resize() {
-  resizeLoadView()
-  resizeMainVisual()
-}
-
-/**
- * メインヴィジュアルのリサイズ
- */
-function resizeMainVisual() {
-  const main_visual = document.querySelector('.main-visual')
-  ,     size        = getSize()
-
-  main_visual.style.width  = `${ size.width }px`
-  main_visual.style.height = `${ size.height }px`
-}
-
-/**
- * ロード画面のリサイズ
- */
-function resizeLoadView() {  
-  const load_view = document.querySelectorAll('.load-view div')
-  ,     size      = getSize()
-
-  for(let i=0; i < load_view.length; i++) {
-    load_view[i].style.width  = `${ size.width }px`
-    load_view[i].style.height = `${ size.height }px`
+const setSize = () => {
+  // devices
+  if(device === 'pc') {
+    const width = window.innerWidth >= 1100 ? window.innerWidth : 1100;
+    const main_illust = document.querySelectorAll('.main-illust-li div'); 
+    main_illust.forEach((node) => {
+      node.style.width = `${ width / 2 - 40 }px`;
+    });
+  } else {
+    const width = screen.width;
+    const main_illust = document.querySelectorAll('.main-illust-li div');
+    main_illust.forEach((node) => {
+      node.style.width = `${ width }px`;
+    });
   }
-}
+};
 
-/**
- * ロードの終了
- */
-function loadFinish() {
-  document.getElementById('load-view').setAttribute('data-state', 'true')
-  document.getElementById('header').setAttribute('data-state', 'true')
-}
+window.addEventListener('load', setSize, false);
+window.addEventListener('resize', setSize, false);
 
-/**
- * 画面サイズの取得
- * @return size { width, height }
- */
-function getSize() {
-  let width  = document.body.offsetWidth
-  ,   height = window.innerHeight
-  if(util.isPC() && width < 1100) width  = 1100
-  if(util.isPC() && height < 650) height = 650
+nav_btn.addEventListener('click', () => {
+  navigation_area.setAttribute('data-state', 'active');
+}, false);
 
-  return { width, height }
-}
+nav_close_btn.addEventListener('click', () => {
+  navigation_area.setAttribute('data-state', 'passive');
+}, false);
+
+nav_li.forEach((li) => {
+  li.addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.href.match(/#(.*)/)[1];
+    
+    page_area.style.display = 'block';
+    page_area.setAttribute('data-href', href);
+  }, false);
+});
+
+page_close_btn.addEventListener('click', () => {
+  setTimeout(() => { page_area.style.display = 'none'; }, 500);
+  page_area.setAttribute('data-href', '');
+}, false);

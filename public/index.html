@@ -2,183 +2,261 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>yuki540 × 結衣</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=750">
-    <meta property="og:url" content="http://yuki540.com">
-    <meta property="og:image" content="http://yuki540.com/images/profile/yuki540.png">
+    <meta name="description" content="「共依存は仕組みだ。気持ちじゃない。」">
+    <meta name="keywords" content="yuki540.com,yuki540,@eriri_jp,satella.io,Shuvi,若葉,Live2D">
+    <title>共依存</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
+    <meta property="og:url" content="https://yuki540.com">
+    <meta property="og:image" content="https://yuki540.com/images/ogp.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="yuki540 × 結衣">
-    <meta property="og:site_name" content="yuki540 × 結衣">
-    <meta property="og:description" content="yuki540のポートフォリオです">
+    <meta property="og:title" content="共依存">
+    <meta property="og:site_name" content="yuki540.com">
+    <meta property="og:description" content="「共依存は仕組みだ。気持ちじゃない。」">
     <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@eriri_jp" />
-    <meta name="twitter:title" content="YUKI540.COM" />
-    <meta name="twitter:description" content="yuki540のポートフォリオサイト。" />
-    <meta name="twitter:image" content="http://yuki540.com/images/profile/yuki540.png" />
-    <link rel="shortcut icon" href="images/profile/yuki540.png" />
-    <link rel="apple-touch-icon" href="images/profile/yuki540.png" />
-    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <meta name="twitter:title" content="共依存" />
+    <meta name="twitter:description" content="「共依存は仕組みだ。気持ちじゃない。」" />
+    <meta name="twitter:image" content="https://yuki540.com/images/ogp.png" />
+    <link rel="shortcut icon" href="./images/icon.png" />
+    <link rel="apple-touch-icon" href="./images/icon.png" />
     <link rel="stylesheet" href="./stylesheets/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./stylesheets/font.css" />
+    <link rel="stylesheet" href="./stylesheets/images.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53682384-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      gtag('js', new Date());
+      gtag('config', 'UA-53682384-5');
+    </script>
   </head>
-  <body>
-    <div id="load-view">
-      <section class="load-view load-view-4"><div></div></section>
-      <section class="load-view load-view-3"><div></div></section>
-      <section class="load-view load-view-2"><div></div></section>
-      <section class="load-view load-view-1"><div></div></section>
-      <section class="load-view load-view-mask">
-        <div><section class="logo"></section></div>
-      </section>
-      <section class="load-view load-view-0">
-        <div>
-          <section class="progress-bar">
-            <section class="bar"></section>
-          </section>
-        </div>
-      </section>
-    </div>
+  <body style="display: none">
     <main id="application">
-      <header id="header">
-        <div class="main-visual">
-          <div class="bg"></div>
-          <div class="logo">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="icon"></div>
-          </div>
-          <div class="overray"></div>
-          <nav class="global-nav">
-            <div class="inner">
-              <a class="nav-li" data-val="#profile"><span class="fa fa-user"></span>人物</a>
-              <a class="nav-li" data-val="#product"><span class="fa fa-laptop"></span>作品</a>
-              <a class="nav-li" data-val="#achievement"><span class="fa fa-heartbeat"></span>成果</a>
-              <a class="nav-li" data-val="#activity"><span class="fa fa-handshake-o"></span>活動</a>
+      <!-- ******************** load view ********************* -->
+      <div id="load-view">
+        <section class="first-view">
+          <div class="line"><div></div></div>
+          <div class="title-box">
+            <div class="per">0%</div>
+            <div class="title">
+              <div></div><div></div><div></div><div></div>
             </div>
-          </nav>
-          <div class="sp-menu">
-            <div class="inner">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
+            <div class="load-bar">
+              <div class="progress"></div>
             </div>
           </div>
-          <div class="close"><div></div></div>
-          <div class="sns-box">
-            <a class="twitter sns-li" href="https://twitter.com/eriri_jp" target="_blank">
-              <div class="fa fa-twitter"></div>
-            </a>
-            <a class="github sns-li" href="https://github.com/yuki540net" target="_blank">
-              <div class="fa fa-github"></div>
-            </a>
+          <div class="author-box">
+            <div class="author">
+              <div></div><div></div><div></div>
+            </div>
+            <div class="endpoint"></div>
           </div>
-          <div class="scroll-icon"><div></div></div>
-        </div>
-      </header>
+        </section>
+        <section class="seconds-view">
+          <div class="illust"></div>
+          <div class="illust"></div>
+          <div class="illust"></div>
+          <div class="char-name">
+            <section class="char-name-li">
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-en"></div>
+            </section>
+            <section class="char-name-li">
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-en"></div>
+            </section>
+            <section class="char-name-li">
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-ja"></div>
+              <div class="text-en"></div>
+            </section>
+          </div>
+          <div class="message-text message-text-1">
+            <div class="inner">
+              <div class="true"></div>
+              <div class="false"></div>
+            </div>
+          </div>
+          <div class="message-text message-text-2">
+            <div class="inner">
+              <div class="true"></div>
+              <div class="false"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- ******************** content ********************* -->
       <article id="content">
-        <!-- profile -->
-        <h2 id="profile" class="section-title">
-          <p class="domain">yuki540.com</p>
-          <p class="title">Title: 人物 - 私について</p>
-          <p class="section">Section: Profile</p>
-        </h2>
-        <section class="area profile">
-          <div class="inner">
-            <section class="profile-li">
-              <div class="box">
-                <div class="info">
-                  <div class="thumb"></div>
-                  <h4 class="name">yuki540</h4>
-                  <p><span class="fa fa-map-marker"></span>Wakayama, Japan</p>
-                  <p><span class="fa fa-birthday-cake"></span>1996/11/09</p>
-                  <p><span class="fa fa-graduation-cap"></span>専門学校3年生</p>
-                  <p><span class="fa fa-heart"></span>Live2D, JavaScript, Ruby, Electron</p>
-                  <a href="https://twitter.com/eriri_jp" class="about">
-                    <span class="fa fa-caret-right"></span>ABOUT ME
-                  </a>
+        <section class="label-box">
+          <div class="label"></div>
+          <div class="label"></div>
+          <div class="label"></div>
+          <div class="label"></div>
+          <div class="vertex vertex-1"></div>
+          <div class="vertex vertex-2"></div>
+          <div class="vertex vertex-3"></div>
+          <div class="vertex vertex-4"></div>
+        </section>
+        <section class="main-illust">
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+          <div class="main-illust-li"><div></div></div>
+        </section>
+        <section class="site-name">
+          <div class="designer">Designed by yuki540.</div>
+          <div class="panel-box">
+            <div class="name-box">
+              <div class="fake-name">
+                <div class="inner">
+                  <div class="word"><div></div></div>
+                  <div class="word"><div></div></div>
+                  <div class="word"><div></div></div>
+                  <div class="word"><div></div></div>
                 </div>
-                <div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
+              </div>
+              <div class="genuine-name">
+                <div class="inner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
                 </div>
               </div>
-            </section>
-            <section class="profile-li">
-              <div class="yome">
-                <div class="yui"></div>
-              </div>
-              <div class="text content-name">やはり俺の青春ラブコメはまちがっている。</div>
-              <div class="text full-name">由比ヶ浜結衣</div>
-              <div class="heart"></div>
-            </section>
-            <section class="profile-li">
-              <div class="box">
-                <h3>好きなキャラクター</h3>
-                <p>由比ヶ浜結衣</p>
-                <h3>好きな女性声優</h3>
-                <p>巽悠衣子</p>
-                <h3>好きな男性声優</h3>
-                <p>内山昂輝</p>
-                <h3>好きなイラストレーター</h3>
-                <p>ぽんかん⑧</p>
-              </div>
-              <div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-              </div>
-            </section>
+            </div>
+          </div>
         </section>
+        <section id="navigation-area">
+          <div class="nav-btn"><div></div><div></div><div></div></div>
+          <nav class="nav-box">
+            <div class="inner">
+              <a class="nav-li" href="#profile">
+                <span>私</span><span>に</span><span>つ</span><span>い</span><span>て</span>
+              </a>
+              <a class="nav-li" href="#history">
+                <span>こ</span><span>の</span><span>サ</span><span>イ</span><span>ト</span><span>の</span><span>歴</span><span>史</span>
+              </a>
+              <a class="nav-li" href="#product">
+                <span>作</span><span>っ</span><span>た</span><span>も</span><span>の</span>
+              </a>
+              <a class="nav-li" href="#memories">
+                <span>思</span><span>い</span><span>出</span>
+              </a>
+              <a class="nav-li" href="#news">
+                <span>お</span><span>知</span><span>ら</span><span>せ</span>
+              </a>
+            </div>
+            <div class="nav-close-btn"></div>
+          </nav>
+        </section>
+        <section class="sns-area">
+          <a href="https://twitter.com/eriri_jp" target="_blank" class="fa fa-twitter"></a>
+          <a href="https://github.com/yuki540net" target="_blank" class="fa fa-github"></a>
+        </section>
+        <section id="page-area">
+          <div class="page-box">
+            <div class="inner">
+              <!-- profile -->
+              <div id="profile">
+                <div class="yuki540-icon">
+                  <img src="./images/profile/yuki540.png" alt="アイコン" />
+                </div>
+                <h2 class="yuki540-name"><span>yuki540</span></h2>
+                <div class="category">
+                  <span class="fa fa-map-marker"></span>
+                  Wakayama, Japan
+                </div>
+                <div class="category">
+                  <span class="fa fa-birthday-cake"></span>
+                  1996/11/09
+                </div>
+                <div class="category">
+                  <span class="fa fa-graduation-cap"></span>
+                  ニート（専門学校を退学し、19年度よりPixivに入社）
+                </div>
+                <div class="category">
+                  <span class="fa fa-heart"></span>
+                  Live2D, Anime, JavaScript, Ruby
+                </div>
+              </div>
 
-        <!-- product -->
-        <h2 id="product" class="section-title">
-          <p class="domain">yuki540.com</p>
-          <p class="title">Title: 作品 - 作ったものを紹介</p>
-          <p class="section">Section: Product</p>
-        </h2>
-        <section class="product area">
-          <div class="inner"><div id="product-box"></div></div>
-        </section>
-        
-        <!-- achievement -->
-        <h2 id="achievement" class="section-title">
-          <p class="domain">yuki540.com</p>
-          <p class="title">Title: 成果 - 今までの成果</p>
-          <p class="section">Section: Achievement</p>
-        </h2>
-        <section class="achievement area">
-          <div class="inner"><div id="achievement-box"></div></div>
-        </section>
+              <!-- history -->
+              <div id="history">
+                <section class="history-li">
+                  <h2 class="version"><span class="fa fa-tag"></span>v1.0.0</h2>
+                  <h3 class="theme">「幻想」</h3>
+                  <p class="description">
+                    v1.0.0のテーマは、「幻想」です。<br />
+                    僕の好きな漫画「インスタント・バレット」の世界観をwebサイトで表現しました。<br />
+                    白を基調としたデザインを意識しました。
+                  </p>
+                  <img src="./images/history/v1.png" alt="yuki540.com version_1.0.0" />
+                  <a href="http://v1.yuki540.com" target="_blank">v1.0.0を見る</a>
+                </section>
+                <section class="history-li">
+                  <h2 class="version"><span class="fa fa-tag"></span>v2.0.0</h2>
+                  <h3 class="theme">「サテラ」</h3>
+                  <p class="description">
+                    v3.0.0のテーマは、「サテラ」です。<br />
+                    推しキャラが「Re:ゼロから始める異世界生活」のサテラなので、サテラをイメージしたデザインに仕上げました。<br />
+                    ちなみにsatella.ioの『satella』はサテラからとっています。
+                  </p>
+                  <img src="./images/history/v2.png" alt="yuki540.com version_2.0.0" />
+                  <a href="http://v2.yuki540.com" target="_blank">v2.0.0を見る</a>
+                </section>
+                <section class="history-li">
+                  <h2 class="version"><span class="fa fa-tag"></span>v3.0.0</h2>
+                  <h3 class="theme">「由比ヶ浜結衣」</h3>
+                  <p class="description">
+                    v3.0.0のテーマは、「由比ヶ浜結衣」です。<br />
+                    推しキャラが「やはり俺の青春ラブコメはまちがっている」の由比ヶ浜結衣に変わったのでサイトをリニューアルしました。<br />
+                    由比ヶ浜をイメージして、爽やかなデザインに仕上げました。
+                  </p>
+                  <img src="./images/history/v3.png" alt="yuki540.com version_3.0.0" />
+                  <a href="http://v3.yuki540.com" target="_blank">v3.0.0を見る</a>
+                </section>
+                <section class="history-li">
+                  <h2 class="version"><span class="fa fa-tag"></span>v4.0.0</h2>
+                  <h3 class="theme">「共依存」</h3>
+                  <p class="description">
+                    v4.0.0のテーマは「共依存」です。<br />
+                    これは、「やはり俺の青春ラブコメはまちがっている。」12巻に登場したキーワードであり、三人の関係性を表すものです。<br />
+                    三人それぞれが依存し合っている描写をwebサイトで表現したいと思い、自分なりにこのサイトで表現してみました。
+                  </p>
+                  <img src="./images/history/v4.png" alt="yuki540.com version_4.0.0" />
+                </section>
+              </div>
 
-        <!-- activity -->
-        <h2 id="activity" class="section-title">
-          <p class="domain">yuki540.com</p>
-          <p class="title">Title: 活動 - 活動記録</p>
-          <p class="section">Section: Activity</p>
-        </h2>
-        <section class="area activity">
-          <div class="inner"><div id="activity-box"></div></div>
+              <!-- product -->
+              <div id="product"></div>
+
+              <!-- memories -->
+              <div id="memories"></div>
+
+              <!-- news -->
+              <div id="news"></div>
+            </div>
+          </div>
+          <div class="page-close-btn"></div>
         </section>
       </article>
-      <footer id="footer">
-        <small id="copyright"></small>
-      </footer>
     </main>
-    <script type="text/javascript" src="./scripts/app.min.js"></script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-53682384-3', 'auto');
-    ga('send', 'pageview');
-    </script>
+    <script type="text/javascript" src="./js/app.min.js"></script>
   </body>
 </html>
