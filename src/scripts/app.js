@@ -6,6 +6,7 @@ import preload_json from './config/preload';
 
 // components
 import Product from './components/product.jsx';
+import Memories from './components/memories.jsx';
 
 // style
 import '../scss/function.scss';
@@ -28,6 +29,8 @@ import '../scss/modules/pc/history.scss';
 import '../scss/modules/sp/history.scss';
 import '../scss/modules/pc/product.scss';
 import '../scss/modules/sp/product.scss';
+import '../scss/modules/pc/memories.scss';
+import '../scss/modules/sp/memories.scss';
 
 document.body.style.display = 'block';
 
@@ -42,6 +45,10 @@ const page_close_btn = document.querySelector('.page-close-btn');
 render(
   <Product />,
   document.getElementById('product')
+);
+render(
+  <Memories />,
+  document.getElementById('memories')
 );
 
 // images preload
