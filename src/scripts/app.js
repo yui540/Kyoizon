@@ -7,6 +7,7 @@ import preload_json from './config/preload';
 // components
 import Product from './components/product.jsx';
 import Memories from './components/memories.jsx';
+import News from './components/news.jsx';
 
 // style
 import '../scss/function.scss';
@@ -31,6 +32,8 @@ import '../scss/modules/pc/product.scss';
 import '../scss/modules/sp/product.scss';
 import '../scss/modules/pc/memories.scss';
 import '../scss/modules/sp/memories.scss';
+import '../scss/modules/pc/news.scss';
+import '../scss/modules/sp/news.scss';
 
 document.body.style.display = 'block';
 
@@ -49,6 +52,10 @@ render(
 render(
   <Memories />,
   document.getElementById('memories')
+);
+render(
+  <News />,
+  document.getElementById('news')
 );
 
 // images preload
