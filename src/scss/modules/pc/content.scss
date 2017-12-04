@@ -75,6 +75,37 @@
     }
 
     /**
+     * sns-area
+     */
+    .sns-area {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      width: 100px;
+      height: 50px;
+      opacity: 0;
+      background-color: #fff;
+      display: block;
+
+      .fa {
+        float: left;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: #333;
+        transition: all 0.35s ease 0s;
+      }
+      .fa:hover { background-color: #333; color: #fff; }
+    }
+    .sns-box:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /**
      * site name 
      */
     .site-name {
@@ -243,6 +274,11 @@
       .main-illust-li:nth-child(4) { animation: show_slide 1s ease 0.9s forwards; }
       .main-illust-li:nth-child(5) { animation: show_slide 1s ease 1.2s forwards; }
     }
+
+    /**
+     * sns area
+     */
+    .sns-area { animation: fadein 0.5s ease 6.8s forwards; }
 
     /**
      * site name

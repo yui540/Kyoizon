@@ -71,6 +71,37 @@
         }
       }
     }
+    
+    /**
+     * sns area
+     */
+    .sns-area {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      background-color: #fff;
+      width: 80px;
+      height: 40px;
+      display: block;
+      opacity: 0;
+
+      .fa {
+        width: 40px;
+        height: 40px;
+        float: left;
+        font-size: 25px;
+        line-height: 40px;
+        text-align: center;
+        color: #333;
+        transition: all 0.35s ease 0s;
+      }
+      .fa:hover { background-color: #333; color: #fff; }
+    }
+    .sns-area:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
 
     /**
      * site name 
@@ -263,6 +294,11 @@
 
       .designer { animation: content__show-designer_sp 1s ease 5.8s forwards; }
     }
+
+    /**
+     * sns area
+     */
+    .sns-area { animation: fadein 0.5s ease 6.8s forwards; }
 
     /**
      * navigation area
