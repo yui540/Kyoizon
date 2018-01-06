@@ -4,7 +4,7 @@ export default {
       "name": "satella.io",
       "link": "https://github.com/yuki540net/satella.io",
       "thumb": "./images/product/satella.io.png",
-      "description": "Live2Dライクなオープンソースソフトウェア",
+      "description": "イラストに「命」を吹き込むソフトウェア",
       "date": "2017/02/05"
     },
     {
